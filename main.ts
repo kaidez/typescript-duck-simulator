@@ -1,5 +1,4 @@
 "use strict"
-
 interface FlyBehavior {
     behavior(): string;
 }
