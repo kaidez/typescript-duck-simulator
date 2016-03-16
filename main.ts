@@ -10,6 +10,19 @@ interface QuackBehavior {
 }
 /* STOP INTERFACES */
 
+
+/* CLASSES */
+
+// Duck Parent Class
+
+/**
+ * Duck
+ */
+class Duck {
+    constructor(parameters) {
+        
+    }
+}
 class MallardDuck implements FlyBehavior {
     behavior(): string {
         console.log( "fly");
