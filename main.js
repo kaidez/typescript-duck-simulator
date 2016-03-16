@@ -1,45 +1,15 @@
 "use strict";
-/* STOP INTERFACES */
-/* CLASSES */
-// Duck Parent Class
-/**
- * Duck
- */
-var Duck = (function () {
-    function Duck(parameters) {
+var Car = (function () {
+    function Car(_model, _year) {
+        this.model = _model;
+        this.year = _year;
     }
-    return Duck;
-}());
-var MallardDuck = (function () {
-    function MallardDuck() {
-    }
-    MallardDuck.prototype.behavior = function () {
-        console.log("fly");
-        return;
+    Car.prototype.toString = function () {
+        return this.model + ", " + this.year;
     };
-    return MallardDuck;
-}());
-var RedheadDuck = (function () {
-    function RedheadDuck() {
-    }
-    RedheadDuck.prototype.behavior = function () {
-        return "quack";
+    Car.prototype.print = function () {
+        console.log(this.toString());
     };
-    return RedheadDuck;
+    return Car;
 }());
-var RubberDuck = (function () {
-    function RubberDuck() {
-    }
-    RubberDuck.prototype.behavior = function () {
-        return "quack";
-    };
-    return RubberDuck;
-}());
-var Decoy = (function () {
-    function Decoy() {
-    }
-    Decoy.prototype.behavior = function () {
-        return "quack";
-    };
-    return Decoy;
-}());
+;
