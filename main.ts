@@ -21,4 +21,14 @@ class RedheadDuck implements QuackBehavior {
     }
 }
 
-var kai = new MallardDuck();
+class RubberDuck implements QuackBehavior {
+    behavior(): string {
+        return "quack";
+    }
+}
+
+class Decoy implements QuackBehavior {
+    behavior(): string {
+        return "quack";
+    }
+}
