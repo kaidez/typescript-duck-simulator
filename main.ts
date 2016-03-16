@@ -1,4 +1,6 @@
 "use strict"
+
+/* START INTERFACES */
 interface FlyBehavior {
     behavior(): string;
 }
@@ -6,6 +8,7 @@ interface FlyBehavior {
 interface QuackBehavior {
     behavior(): string;
 }
+/* STOP INTERFACES */
 
 class MallardDuck implements FlyBehavior {
     behavior(): string {
