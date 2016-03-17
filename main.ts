@@ -1,29 +1,38 @@
 "use strict";
 
-interface FlyBehavior    {
-    whichDuck: string;
+interface FlyWithWings    {
     howToFly: string;
     fly : Function; 
-    print : Function;
+    
 }
 
-interface QuackBehavior    {
-    whichDuck: string;
+interface NoFly    {
     howToQuack: string;
-    Quack : Function; 
-    print : Function;
+    quack : Function; 
+
+}
+
+interface FlyBehavior extends FlyWithWings, NoFly {
+    whichDuck: string;
+    printProperties : Function;
 }
 
 
 class Duck implements FlyBehavior     {
    whichDuck: string;
    howToFly: string;
+   howToQuack: string;
    fly() {
      return "Can a " + this.whichDuck  + " Fly? " + this.howToFly;
    }
    
-   print() {
-     console.log(this.fly());
+   quack() {
+     return "Can a " + this.whichDuck  + " Quack? " + this.howToQuack;
+   }
+   
+   printProperties() {
+     console.log(this.fly() );
+     console.log( this.quack() );
    }
    
    constructor(_whichDuck:string, _howToFly:string) {
@@ -35,4 +44,4 @@ class Duck implements FlyBehavior     {
 
 var mallard = new Duck( "mallard", "yes!!!!" );
 
-mallard.print();
+mallard.printProperties();
