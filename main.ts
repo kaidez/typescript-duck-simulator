@@ -1,15 +1,13 @@
 "use strict";
 
-interface FlyWithWings    {
+interface FlyWithWings {
     howToFly: string;
-    fly : Function; 
-    
+    fly : Function;
 }
 
-interface NoFly    {
+interface NoFly {
     howToQuack: string;
-    quack : Function; 
-
+    quack : Function;
 }
 
 interface FlyBehavior extends FlyWithWings, NoFly {
@@ -18,7 +16,7 @@ interface FlyBehavior extends FlyWithWings, NoFly {
 }
 
 
-class Duck implements FlyBehavior     {
+class Duck implements FlyBehavior {
    whichDuck: string;
    howToFly: string;
    howToQuack: string;
@@ -31,11 +29,11 @@ class Duck implements FlyBehavior     {
    }
    
    printProperties() {
-     console.log(this.fly() );
+     console.log( this.fly() );
      console.log( this.quack() );
    }
    
-   constructor(_whichDuck:string, _howToFly:string) {
+   constructor( _whichDuck:string, _howToFly:string ) {
      this.whichDuck = _whichDuck;
      this.howToFly = _howToFly;
    }
