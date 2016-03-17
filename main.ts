@@ -1,41 +1,50 @@
 "use strict";
 
+/*
+ * =====================================================================
+ * START BUILDING INTERFACES
+ * =====================================================================
+ */
 interface FlyWithWings {
-    howToFly: string;
-    fly : Function;
+  howToFly: string;
+  fly : Function;
 }
 
 interface NoFly {
-    howToQuack: string;
-    quack : Function;
+  howToQuack: string;
+  quack : Function;
 }
 
 interface FlyBehavior extends FlyWithWings, NoFly {
-    whichDuck: string;
-    printProperties : Function;
+  whichDuck: string;
+  printProperties : Function;
 }
 
-
+/*
+ * =====================================================================
+ * STOP BUILDING INTERFACES
+ * =====================================================================
+ */
 class Duck implements FlyBehavior {
-   whichDuck: string;
-   howToFly: string;
-   howToQuack: string;
-   fly() {
-     return "Can a " + this.whichDuck  + " Fly? " + this.howToFly;
-   }
+  whichDuck: string;
+  howToFly: string;
+  howToQuack: string;
+  fly() {
+	return "Can a " + this.whichDuck  + " Fly? " + this.howToFly;
+  }
    
-   quack() {
-     return "Can a " + this.whichDuck  + " Quack? " + this.howToQuack;
-   }
+  quack() {
+	return "Can a " + this.whichDuck  + " Quack? " + this.howToQuack;
+  }
    
    printProperties() {
-     console.log( this.fly() );
-     console.log( this.quack() );
+	 console.log( this.fly() );
+	 console.log( this.quack() );
    }
    
    constructor( _whichDuck:string, _howToFly:string ) {
-     this.whichDuck = _whichDuck;
-     this.howToFly = _howToFly;
+	 this.whichDuck = _whichDuck;
+	 this.howToFly = _howToFly;
    }
  
 };

@@ -1,4 +1,9 @@
 "use strict";
+/*
+ * =====================================================================
+ * STOP BUILDING INTERFACES
+ * =====================================================================
+ */
 var Duck = (function () {
     function Duck(_whichDuck, _howToFly) {
         this.whichDuck = _whichDuck;
