@@ -1,15 +1,16 @@
 "use strict";
-var Car = (function () {
-    function Car(_model, _year) {
-        this.model = _model;
-        this.year = _year;
+var Duck = (function () {
+    function Duck(_howToFly) {
+        this.howToFly = _howToFly;
     }
-    Car.prototype.toString = function () {
-        return this.model + ", " + this.year;
+    Duck.prototype.fly = function () {
+        return "Can I Fly? " + this.howToFly;
     };
-    Car.prototype.print = function () {
-        console.log(this.toString());
+    Duck.prototype.print = function () {
+        console.log(this.fly());
     };
-    return Car;
+    return Duck;
 }());
 ;
+var mallard = new Duck("yes!!!!");
+mallard.print();

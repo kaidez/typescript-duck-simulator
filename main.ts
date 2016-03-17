@@ -1,26 +1,34 @@
-"use strict"
+"use strict";
 
 interface FlyBehavior    {
-    model : string;
-    year : number;
-    toString : Function; 
+    howToFly: string;
+    fly : Function; 
     print : Function;
 }
 
-class Car implements FlyBehavior     {
-   model : string;
-   year : number;
-   toString() {
-     return this.model + ", " + this.year;
+interface QuackBehavior    {
+    howToQuack: string;
+    Quack : Function; 
+    print : Function;
+}
+
+
+class Duck implements FlyBehavior     {
+   howToFly: string;
+   fly() {
+     return "Can I Fly? " + this.howToFly;
    }
    
    print() {
-     console.log(this.toString());
+     console.log(this.fly());
    }
    
-   constructor(_model:string, _year:number) {
-     this.model = _model;
-     this.year = _year;
+   constructor(_howToFly:string) {
+     this.howToFly = _howToFly;
    }
-   
+ 
 };
+
+var mallard = new Duck( "yes!!!!" );
+
+mallard.print();
