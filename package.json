@@ -1,11 +1,15 @@
 {
   "name": "typescript-playground",
   "version": "1.0.0",
-  "description": "",
+  "description": "The classic Duck Simulator from \"Head First Design Patterns\" written in TypeScript",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch-ts": "tsc *.ts -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kaidez/typescript-duck-simulator"
   },
   "author": "",
   "license": "ISC",
