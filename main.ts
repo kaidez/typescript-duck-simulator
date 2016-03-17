@@ -6,13 +6,13 @@
  * =====================================================================
  */
 interface FlyWithWings {
-  howToFly: string;
+  howToFly : string;
   fly : Function;
 }
 
 interface NoFly {
-  howToQuack: string;
-  quack : Function;
+  howToFly : string;
+  fly : Function;
 }
 
 interface FlyBehavior extends FlyWithWings, NoFly {
@@ -28,24 +28,18 @@ interface FlyBehavior extends FlyWithWings, NoFly {
 class Duck implements FlyBehavior {
   whichDuck: string;
   howToFly: string;
-  howToQuack: string;
   fly() {
 	return "Can a " + this.whichDuck  + " Fly? " + this.howToFly;
   }
    
-  quack() {
-	return "Can a " + this.whichDuck  + " Quack? " + this.howToQuack;
-  }
    
    printProperties() {
 	 console.log( this.fly() );
-	 console.log( this.quack() );
    }
    
-   constructor( _whichDuck:string, _howToFly:string, _howToQuack:string ) {
+   constructor( _whichDuck:string, _howToFly:string ) {
 	 this.whichDuck = _whichDuck;
 	 this.howToFly = _howToFly;
-	 this.howToQuack = _howToQuack;
    }
  
 };
