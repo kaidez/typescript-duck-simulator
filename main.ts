@@ -42,9 +42,10 @@ class Duck implements FlyBehavior {
 	 console.log( this.quack() );
    }
    
-   constructor( _whichDuck:string, _howToFly:string ) {
+   constructor( _whichDuck:string, _howToFly:string, _howToQuack:string ) {
 	 this.whichDuck = _whichDuck;
 	 this.howToFly = _howToFly;
+	 this.howToQuack = _howToQuack;
    }
  
 };

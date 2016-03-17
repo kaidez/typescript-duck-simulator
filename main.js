@@ -5,9 +5,10 @@
  * =====================================================================
  */
 var Duck = (function () {
-    function Duck(_whichDuck, _howToFly) {
+    function Duck(_whichDuck, _howToFly, _howToQuack) {
         this.whichDuck = _whichDuck;
         this.howToFly = _howToFly;
+        this.howToQuack = _howToQuack;
     }
     Duck.prototype.fly = function () {
         return "Can a " + this.whichDuck + " Fly? " + this.howToFly;
