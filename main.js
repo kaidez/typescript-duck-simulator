@@ -1,10 +1,11 @@
 "use strict";
 var Duck = (function () {
-    function Duck(_howToFly) {
+    function Duck(_whichDuck, _howToFly) {
+        this.whichDuck = _whichDuck;
         this.howToFly = _howToFly;
     }
     Duck.prototype.fly = function () {
-        return "Can I Fly? " + this.howToFly;
+        return "Can a " + this.whichDuck + " Fly? " + this.howToFly;
     };
     Duck.prototype.print = function () {
         console.log(this.fly());
@@ -12,5 +13,5 @@ var Duck = (function () {
     return Duck;
 }());
 ;
-var mallard = new Duck("yes!!!!");
+var mallard = new Duck("mallard", "yes!!!!");
 mallard.print();
