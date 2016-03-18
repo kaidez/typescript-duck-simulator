@@ -71,6 +71,10 @@ class Duck implements FlyBehavior, QuackBehavior {
 	swim() {
 		return "I can swim!!";
 	}
+	
+	display() {
+		return "This is what I look like";
+	}
  
 	printProperties() {
 		console.log( this.fly() );

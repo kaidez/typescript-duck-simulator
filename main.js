@@ -62,6 +62,9 @@ var Duck = (function () {
     Duck.prototype.swim = function () {
         return "I can swim!!";
     };
+    Duck.prototype.display = function () {
+        return "This is what I look like";
+    };
     Duck.prototype.printProperties = function () {
         console.log(this.fly());
     };
