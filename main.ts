@@ -27,6 +27,8 @@ class NoFly implements FlyBehavior {
 
 
 // QUACK BEHAVIOR
+// Encapsulate what varies...like how ducks quack
+
 /*
  * =====================================================================
  * STOP BUILDING INTERFACES

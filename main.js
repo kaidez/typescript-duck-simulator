@@ -21,6 +21,7 @@ var NoFly = (function () {
     return NoFly;
 }());
 // QUACK BEHAVIOR
+// Encapsulate what varies...like how ducks quack
 /*
  * =====================================================================
  * STOP BUILDING INTERFACES
