@@ -6,6 +6,7 @@
  * =====================================================================
  */
 
+// FLY BEHAVIOR
 // Encapsulate what varies...like how ducks fly
 interface FlyBehavior {
     fly : Function;
@@ -23,6 +24,9 @@ class NoFly implements FlyBehavior {
     }
 }
 
+
+
+// QUACK BEHAVIOR
 /*
  * =====================================================================
  * STOP BUILDING INTERFACES
