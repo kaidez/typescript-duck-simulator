@@ -5,19 +5,22 @@
  * START BUILDING INTERFACES
  * =====================================================================
  */
-interface FlyWithWings {
-  howToFly : string;
-  fly : Function;
+
+// Encapsulate what varies...like how ducks fly
+interface FlyBehavior {
+    fly : Function;
 }
 
-interface NoFly {
-  howToFly : string;
-  fly : Function;
+class FlyWithWings implements FlyBehavior {
+    fly() {
+	    return "I'm flying!!";
+    }
 }
 
-interface FlyBehavior extends FlyWithWings, NoFly {
-  whichDuck: string;
-  printProperties : Function;
+class NoFly implements FlyBehavior {
+    fly() {
+	    return "I can't fly";
+    }
 }
 
 /*
@@ -26,24 +29,31 @@ interface FlyBehavior extends FlyWithWings, NoFly {
  * =====================================================================
  */
 class Duck implements FlyBehavior {
-  whichDuck: string;
-  howToFly: string;
-  fly() {
-	return "Can a " + this.whichDuck  + " Fly? " + this.howToFly;
-  }
-   
-   
-   printProperties() {
-	 console.log( this.fly() );
-   }
-   
-   constructor( _whichDuck:string, _howToFly:string ) {
-	 this.whichDuck = _whichDuck;
-	 this.howToFly = _howToFly;
-   }
+    
+    howToFly: string;
+  
+    fly() {
+	    return "Can a Duck Fly? " + this.howToFly;
+    }
+    
+    swim() {
+	    return "I can swim!!";
+    }
  
-};
+    printProperties() {
+	    console.log( this.fly() );
+    }
+    
+    constructor(  _howToFly:string ) {
+	    this.howToFly = _howToFly;
+    }
 
-var mallard = new Duck( "mallard", "yes!!!!" );
 
-mallard.printProperties();
+   
+}
+
+class Mallard extends Duck {
+    
+}
+
+var kai = new Mallard("NO!!!!!!!!!");
