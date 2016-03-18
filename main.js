@@ -20,8 +20,30 @@ var NoFly = (function () {
     };
     return NoFly;
 }());
-// QUACK BEHAVIOR
-// Encapsulate what varies...like how ducks quack
+var Quack = (function () {
+    function Quack() {
+    }
+    Quack.prototype.quack = function () {
+        return "I'm flying!!";
+    };
+    return Quack;
+}());
+var Squeak = (function () {
+    function Squeak() {
+    }
+    Squeak.prototype.quack = function () {
+        return "I can't fly";
+    };
+    return Squeak;
+}());
+var Mute = (function () {
+    function Mute() {
+    }
+    Mute.prototype.quack = function () {
+        return "I can't fly";
+    };
+    return Mute;
+}());
 /*
  * =====================================================================
  * STOP BUILDING INTERFACES
@@ -32,7 +54,10 @@ var Duck = (function () {
         this.howToFly = _howToFly;
     }
     Duck.prototype.fly = function () {
-        return "Can a Duck Fly? " + this.howToFly;
+        return "Can a Duck Fly? " + this.howToQuack;
+    };
+    Duck.prototype.quack = function () {
+        return "Can a Duck Fly? " + this.howToQuack;
     };
     Duck.prototype.swim = function () {
         return "I can swim!!";
