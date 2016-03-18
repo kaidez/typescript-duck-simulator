@@ -62,9 +62,6 @@ var Duck = (function () {
     Duck.prototype.swim = function () {
         return "I can swim!!";
     };
-    Duck.prototype.display = function () {
-        return "This is what I look like";
-    };
     Duck.prototype.printProperties = function () {
         console.log(this.fly());
     };
@@ -75,6 +72,9 @@ var Mallard = (function (_super) {
     function Mallard() {
         _super.apply(this, arguments);
     }
+    Mallard.prototype.display = function () {
+        return "This is what I look like";
+    };
     return Mallard;
 }(Duck));
 var kai = new Mallard("NO!!!!!!!!!");
