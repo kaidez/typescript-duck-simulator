@@ -61,11 +61,11 @@ class Duck implements FlyBehavior, QuackBehavior {
 	howToQuack: string;
   
 	fly() {
-		return "Can a Duck Fly? " + this.howToQuack;
+		return "Can a Duck Fly? " + this.howToFly;
 	}
 	
 	quack() {
-		return "Can a Duck Fly? " + this.howToQuack;
+		return "Can a Duck Quack? " + this.howToQuack;
 	}
 	
 	swim() {

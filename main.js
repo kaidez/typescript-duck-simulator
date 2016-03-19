@@ -54,10 +54,10 @@ var Duck = (function () {
         this.howToFly = _howToFly;
     }
     Duck.prototype.fly = function () {
-        return "Can a Duck Fly? " + this.howToQuack;
+        return "Can a Duck Fly? " + this.howToFly;
     };
     Duck.prototype.quack = function () {
-        return "Can a Duck Fly? " + this.howToQuack;
+        return "Can a Duck Quack? " + this.howToQuack;
     };
     Duck.prototype.swim = function () {
         return "I can swim!!";
