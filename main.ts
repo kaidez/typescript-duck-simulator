@@ -71,7 +71,11 @@ class Duck implements FlyBehavior, QuackBehavior {
 	swim() {
 		return "I can swim!!";
 	}
- 
+
+	display() {
+		// Need to build
+	}
+   
 	printProperties() {
 		console.log( this.fly() );
 	}
@@ -84,8 +88,8 @@ class Duck implements FlyBehavior, QuackBehavior {
 
 class Mallard extends Duck {
 	
-	display() {
-		return "This is what I look like";
+	displayName() {
+		return "My name is Nate!";
 	}
 	
 }
