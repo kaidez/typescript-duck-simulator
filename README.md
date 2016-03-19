@@ -2,7 +2,7 @@
 
 In order to get a better handle of <a href="http://www.typescriptlang.org/">TypeScript</a>, I used it to recreate the classic "Duck Simulator" example in <a target="_blank" href="http://www.amazon.com/gp/search/ref=as_li_qf_sp_sr_tl?ie=UTF8&camp=1789&creative=9325&index=aps&keywords=Head%20First%20Design%20Patterns&linkCode=ur2&tag=kaidez-20&linkId=3NYIV7U2HB2AUD63"><em>Head First Design Patterns</em>.</a><img src="https://ir-na.amazon-adsystem.com/e/ir?t=kaidez-20&l=ur2&o=1" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />. The book example utilizes the <a href="https://en.wikipedia.org/wiki/Strategy_pattern">Strategy Pattern</a> so that's what I'm doing.
 
-The content in _Design Patterns in TypeScript_ repo link below already says how to apply TypeScript to the pattern but again, I'm doing this so I can get a better handle on TypeScript. And he best way to get a better handle on code is to actually write it.
+The content in the _Design Patterns in TypeScript_ repo link below already says how to apply TypeScript to the pattern but again, I'm doing this so I can get a better handle on TypeScript. And he best way to get a better handle on code is to actually write it.
 
 All still in progress...keep watching!!!!
 
