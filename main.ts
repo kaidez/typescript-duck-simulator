@@ -24,12 +24,36 @@ class NoFly implements FlyBehavior {
 	}
 }
 
+// QUACK BEHAVIOR INTERFACE
+// Encapsulate what varies...like how ducks quack
+interface QuackBehavior {
+	quack(): void;
+}
+
+class Quack implements QuackBehavior {
+	public quack(): void {
+		return console.log("I'm quacking!!");
+	}
+}
+
+class Squeak implements QuackBehavior {
+	public quack(): void {
+		return console.log("I'm squeaking!!");
+	}
+}
+
+class MuteQuack implements QuackBehavior {
+	public quack(): void {
+		return console.log("I don't quack!!");
+	}
+}
 
 class Duck {
   
 	private flybehavior: FlyBehavior;
+  private quackbehavior: QuackBehavior;
   
-  constructor(flybehavior: FlyBehavior) {
+  constructor(flybehavior: FlyBehavior, quackbehavior: QuackBehavior) {
     this.flybehavior = flybehavior;
   }
 
@@ -37,4 +61,7 @@ class Duck {
     this.flybehavior.fly();
   }
 
+  public executeQuack(): void {
+    this.flybehavior.quack();
+  }
 }
