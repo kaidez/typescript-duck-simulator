@@ -2,11 +2,11 @@
 
 /*
  * =====================================================================
- * START BUILDING INTERFACES
+ * INTERFACES
  * =====================================================================
  */
 
-// FLY BEHAVIOR
+// FLY BEHAVIOR INTERFACE
 // Encapsulate what varies...like how ducks fly
 interface FlyBehavior {
 	fly(): void;
@@ -25,11 +25,6 @@ class NoFly implements FlyBehavior {
 }
 
 
-/*
- * =====================================================================
- * STOP BUILDING INTERFACES
- * =====================================================================
- */
 class Duck {
   
 	private flybehavior: FlyBehavior;

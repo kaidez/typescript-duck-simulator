@@ -15,11 +15,6 @@ var NoFly = (function () {
     };
     return NoFly;
 }());
-/*
- * =====================================================================
- * STOP BUILDING INTERFACES
- * =====================================================================
- */
 var Duck = (function () {
     function Duck(flybehavior) {
         this.flybehavior = flybehavior;
