@@ -55,6 +55,7 @@ class Duck {
   
   constructor(flybehavior: FlyBehavior, quackbehavior: QuackBehavior) {
     this.flybehavior = flybehavior;
+    this.quackbehavior = quackbehavior;
   }
 
   public executeFly(): void {

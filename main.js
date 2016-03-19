@@ -42,6 +42,7 @@ var MuteQuack = (function () {
 var Duck = (function () {
     function Duck(flybehavior, quackbehavior) {
         this.flybehavior = flybehavior;
+        this.quackbehavior = quackbehavior;
     }
     Duck.prototype.executeFly = function () {
         this.flybehavior.fly();
