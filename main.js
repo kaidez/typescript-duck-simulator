@@ -47,7 +47,7 @@ var Duck = (function () {
         this.flybehavior.fly();
     };
     Duck.prototype.executeQuack = function () {
-        this.flybehavior.quack();
+        this.quackbehavior.quack();
     };
     return Duck;
 }());

@@ -62,6 +62,6 @@ class Duck {
   }
 
   public executeQuack(): void {
-    this.flybehavior.quack();
+    this.quackbehavior.quack();
   }
 }
