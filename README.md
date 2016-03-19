@@ -7,4 +7,4 @@ Some links that helped me...
 
 * <a href="http://www.developer.com/lang/top-10-things-to-know-about-typescript.html">Top 10 Things to Know about TypeScript by <em>Bipin Joshi</em></a>
 
-<a href="https://github.com/torokmark/design_patterns_in_typescript">Design Patterns in TypeScript</a>
+* <a href="https://github.com/torokmark/design_patterns_in_typescript">Design Patterns in TypeScript</a>
