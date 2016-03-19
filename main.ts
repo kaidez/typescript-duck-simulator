@@ -9,89 +9,37 @@
 // FLY BEHAVIOR
 // Encapsulate what varies...like how ducks fly
 interface FlyBehavior {
-	fly : Function;
+	fly(): void;
 }
 
 class FlyWithWings implements FlyBehavior {
-	fly() {
-		return "I'm flying!!";
+	public fly(): void {
+		return console.log("I'm flying!!");
 	}
 }
 
 class NoFly implements FlyBehavior {
-	fly() {
-		return "I can't fly";
+	public fly(): void {
+		return console.log("I can't fly!!");
 	}
 }
 
-
-
-// QUACK BEHAVIOR
-// Encapsulate what varies...like how ducks quack
-interface QuackBehavior {
-	quack : Function;
-}
-
-class Quack implements QuackBehavior {
-	quack() {
-		return "I'm flying!!";
-	}
-}
-
-class Squeak implements QuackBehavior {
-	quack() {
-		return "I can't fly";
-	}
-}
-
-class Mute implements QuackBehavior {
-	quack() {
-		return "I can't fly";
-	}
-}
 
 /*
  * =====================================================================
  * STOP BUILDING INTERFACES
  * =====================================================================
  */
-class Duck implements FlyBehavior, QuackBehavior {
-	
-	howToFly: string;
-	howToQuack: string;
+class Duck {
   
-	fly() {
-		return "Can a Duck Fly? " + this.howToFly;
-	}
-	
-	quack() {
-		return "Can a Duck Quack? " + this.howToQuack;
-	}
-	
-	swim() {
-		return "I can swim!!";
-	}
+	private flybehavior: FlyBehavior;
+  
+  constructor(flybehavior: FlyBehavior) {
+    this.flybehavior = flybehavior;
+  }
 
-	display() {
-		// Need to build
-	}
-   
-	printProperties() {
-		console.log( this.fly() );
-	}
-	
-	constructor(  _howToFly:string ) {
-		this.howToFly = _howToFly;
-	}
+  public executeFly(): void {
+    this.flybehavior.fly();
+  }
 
 }
-
-class Mallard extends Duck {
-	
-	displayName() {
-		return "My name is Nate!";
-	}
-	
-}
-
-var kai = new Mallard("NO!!!!!!!!!");
