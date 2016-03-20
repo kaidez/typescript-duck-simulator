@@ -48,6 +48,15 @@ class MuteQuack implements QuackBehavior {
 	}
 }
 
+
+
+/*
+ * =====================================================================
+ * CLASSES
+ * =====================================================================
+ */
+
+// Create abstract "Duck" class: it will never be directly instantiated
 class Duck {
   
 	private flybehavior: FlyBehavior;

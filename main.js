@@ -39,6 +39,12 @@ var MuteQuack = (function () {
     };
     return MuteQuack;
 }());
+/*
+ * =====================================================================
+ * CLASSES
+ * =====================================================================
+ */
+// Create abstract "Duck" class: it will never be directly instantiated
 var Duck = (function () {
     function Duck(flybehavior, quackbehavior, name) {
         this.flybehavior = flybehavior;
