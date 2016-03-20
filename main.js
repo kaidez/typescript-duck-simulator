@@ -84,6 +84,9 @@ var Mallard = (function (_super) {
     function Mallard() {
         _super.apply(this, arguments);
     }
+    Mallard.prototype.display = function () {
+        return console.log("I am a Mallard");
+    };
     return Mallard;
 }(Duck));
 // Class instances

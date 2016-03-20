@@ -95,7 +95,12 @@ abstract class Duck {
     this.quackbehavior.quack();
   }
   
-  // Let Duck instances implement the display method however they want
+  /*
+   * All Duck subclass will have their own unique display() method so
+   * define the signature of this method. This means that each subclass
+   * MUST have a display() method of some kind or the TypeScript build
+   * will break. 
+   */
   abstract display(): void;
   
 }
@@ -109,7 +114,9 @@ abstract class Duck {
 
 // Mallard concrete class
 class Mallard extends Duck {
-  
+  public display(): void {
+    return console.log("I am a Mallard");
+  } 
 }
 
 // Class instances
