@@ -47,6 +47,8 @@ var MuteQuack = (function () {
 // Create abstract "Duck" class: it will never be directly instantiated
 var Duck = (function () {
     function Duck(flybehavior, quackbehavior, name) {
+        if (name === void 0) { name = "Anonymous Duck"; }
+        this.name = name;
         this.flybehavior = flybehavior;
         this.quackbehavior = quackbehavior;
         this.name = name;
@@ -62,4 +64,4 @@ var Duck = (function () {
     };
     return Duck;
 }());
-var joe = new Duck(new NoFly(), new MuteQuack(), "joe");
+var joe = new Duck(new NoFly(), new MuteQuack());

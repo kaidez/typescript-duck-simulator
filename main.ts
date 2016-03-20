@@ -61,9 +61,8 @@ class Duck {
   
 	private flybehavior: FlyBehavior;
   private quackbehavior: QuackBehavior;
-  name: string;
   
-  constructor( flybehavior: FlyBehavior, quackbehavior: QuackBehavior, name: string ) {
+  constructor( flybehavior: FlyBehavior, quackbehavior: QuackBehavior, public name: string = "Anonymous Duck" ) {
     this.flybehavior = flybehavior;
     this.quackbehavior = quackbehavior;
     this.name = name;
@@ -82,4 +81,4 @@ class Duck {
   }
 }
 
-var joe = new Duck( new NoFly(), new MuteQuack(), "joe" );
+var joe = new Duck( new NoFly(), new MuteQuack() );
