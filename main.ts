@@ -62,6 +62,7 @@ class MuteQuack implements QuackBehavior {
  */
 class Duck {
   
+  // Define instance variables
 	private flybehavior: FlyBehavior;
   private quackbehavior: QuackBehavior;
   
