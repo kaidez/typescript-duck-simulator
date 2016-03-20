@@ -83,7 +83,7 @@ class Duck {
 }
 
 
-// Mallard derived class will go here...
+// Mallard concrete/derived class will go here...
 
 
 // Class instances
