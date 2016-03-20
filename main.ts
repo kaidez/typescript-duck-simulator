@@ -60,7 +60,7 @@ class MuteQuack implements QuackBehavior {
  * Create an abstract/base "Duck" class that it will never be directly
  * instantiated.
  */
-class Duck {
+abstract class Duck {
   
   /*
    * Define instance variables
@@ -87,14 +87,15 @@ class Duck {
     this.quackbehavior.quack();
   }
   
-  public display(): void {
-    return console.log( this.name );
-  }
+  abstract display(): void;
+  
 }
 
 
 // Mallard concrete/derived class will go here...
-
+class Mallard extends Duck {
+  
+}
 
 // Class instances
-var joe = new Duck( new NoFly(), new MuteQuack() );
+var joe = new Mallard( new NoFly(), new MuteQuack() );

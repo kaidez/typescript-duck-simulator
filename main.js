@@ -1,4 +1,9 @@
 "use strict";
+var __extends = (this && this.__extends) || function (d, b) {
+    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+};
 var FlyWithWings = (function () {
     function FlyWithWings() {
     }
@@ -61,11 +66,15 @@ var Duck = (function () {
     Duck.prototype.performQuack = function () {
         this.quackbehavior.quack();
     };
-    Duck.prototype.display = function () {
-        return console.log(this.name);
-    };
     return Duck;
 }());
 // Mallard concrete/derived class will go here...
+var Mallard = (function (_super) {
+    __extends(Mallard, _super);
+    function Mallard() {
+        _super.apply(this, arguments);
+    }
+    return Mallard;
+}(Duck));
 // Class instances
-var joe = new Duck(new NoFly(), new MuteQuack());
+var joe = new Mallard(new NoFly(), new MuteQuack());
