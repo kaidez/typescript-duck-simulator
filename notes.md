@@ -10,4 +10,6 @@
 
 * read up on "function overloading".
 
+* read up on "static members".
+
 * you can either "Go to a Definition" and jump to to where your code is referenced or "Peek at a Definition" and see the code from where you are.
