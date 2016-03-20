@@ -59,7 +59,7 @@ class MuteQuack implements QuackBehavior {
 abstract class Duck {
   
   /*
-   * Define instance variables
+   * Define "flybehavior" and "quackbehavior" instance variables
    * ==================================================================
    * NOTE: the Head First book takes and extra step with these behavior
    * and uses setter methods to make them more dynamic.  I didn't do
