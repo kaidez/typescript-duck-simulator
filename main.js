@@ -44,7 +44,9 @@ var MuteQuack = (function () {
  * CLASSES
  * =====================================================================
  */
-// Create abstract "Duck" class: it will never be directly instantiated
+/*
+ * Create an abstract/base "Duck" class that it will never be directly instantiated.
+ */
 var Duck = (function () {
     function Duck(flybehavior, quackbehavior, name) {
         if (name === void 0) { name = "Anonymous Duck"; }
@@ -63,4 +65,5 @@ var Duck = (function () {
     };
     return Duck;
 }());
+// Mallard derived class will go here...
 var joe = new Duck(new NoFly(), new MuteQuack());

@@ -56,7 +56,9 @@ class MuteQuack implements QuackBehavior {
  * =====================================================================
  */
 
-// Create abstract "Duck" class: it will never be directly instantiated
+/*
+ * Create an abstract/base "Duck" class that it will never be directly instantiated.
+ */
 class Duck {
   
 	private flybehavior: FlyBehavior;
@@ -80,4 +82,6 @@ class Duck {
   }
 }
 
+
+// Mallard derived class will go here...
 var joe = new Duck( new NoFly(), new MuteQuack() );
