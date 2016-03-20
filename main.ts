@@ -65,7 +65,6 @@ class Duck {
   constructor( flybehavior: FlyBehavior, quackbehavior: QuackBehavior, public name: string = "Anonymous Duck" ) {
     this.flybehavior = flybehavior;
     this.quackbehavior = quackbehavior;
-    this.name = name;
   }
 
   public executeFly(): void {

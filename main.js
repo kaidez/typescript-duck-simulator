@@ -51,7 +51,6 @@ var Duck = (function () {
         this.name = name;
         this.flybehavior = flybehavior;
         this.quackbehavior = quackbehavior;
-        this.name = name;
     }
     Duck.prototype.executeFly = function () {
         this.flybehavior.fly();
