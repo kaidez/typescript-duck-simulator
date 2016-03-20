@@ -59,10 +59,11 @@ class MuteQuack implements QuackBehavior {
 abstract class Duck {
   
   /*
-   * Define "flybehavior" and "quackbehavior" instance variables
+   * Define "flybehavior" and "quackbehavior" instance variables that
+   * reference the two behavior classes (FlyBehavior and QuackBehavior)
    * ==================================================================
    * NOTE: the Head First book takes and extra step with these behavior
-   * and uses setter methods to make them more dynamic.  I didn't do
+   * and uses setter methods to make them more dynamic. I didn't do
    * that here because I don't see the need for it. I think
    * JavaScript's natural dynamic nature are more than enough, but
    * please let me know if I'm wrong. 
