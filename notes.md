@@ -6,12 +6,13 @@
 
 * use `void` when a property doesn't have a specific type.
 
-* TypeScript can guess types...read up on "typescript type inferance" to learn more
+* TypeScript can guess types...read up on "typescript type inference" to learn more
 
 * read up on "function overloading".
 
 * read up on "static members".
 
-* make sure to undertand the firm definition of "derived class"
 
-* you can either "Go to a Definition" and jump to to where your code is referenced or "Peek at a Definition" and see the code from where you are.
+* you can either "Go to a Definition" and jump to where your code is referenced or "Peek at a Definition" and see the code from where you are.
+
+* TypeScript only injected code when there was class inheritance...it did the "_extends" thing. Is this still true?   
