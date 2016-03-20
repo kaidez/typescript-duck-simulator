@@ -85,10 +85,10 @@ abstract class Duck {
     this.flybehavior.fly();
   }
   
-   /*
-    * Call "performQuack()" when you want a class instance to implement
-    * one of the three "quack" behaviors created earlier
-    */
+  /*
+   * Call "performQuack()" when you want a class instance to implement
+   * one of the three "quack" behaviors created earlier
+   */
   public performQuack(): void {
     this.quackbehavior.quack();
   }
