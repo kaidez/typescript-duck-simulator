@@ -3,6 +3,8 @@
 /*
  * =====================================================================
  * INTERFACES
+ * Don't define behavoir to any Duck classes, use interfaces to
+ *  delegate behavoiral responsibility instead.
  * =====================================================================
  */
 
