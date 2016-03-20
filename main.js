@@ -57,9 +57,17 @@ var Duck = (function () {
         this.flybehavior = flybehavior;
         this.quackbehavior = quackbehavior;
     }
+    /*
+     * Call "performFly()" when you want a class instance to implement
+     * one of the two "fly" behaviors created earlier
+     */
     Duck.prototype.performFly = function () {
         this.flybehavior.fly();
     };
+    /*
+    * Call "performQuack()" when you want a class instance to implement
+    * one of the three "quack" behaviors created earlier
+    */
     Duck.prototype.performQuack = function () {
         this.quackbehavior.quack();
     };

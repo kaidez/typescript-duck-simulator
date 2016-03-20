@@ -77,10 +77,18 @@ abstract class Duck {
     this.quackbehavior = quackbehavior;
   }
 
+  /*
+   * Call "performFly()" when you want a class instance to implement
+   * one of the two "fly" behaviors created earlier
+   */
   public performFly(): void {
     this.flybehavior.fly();
   }
-
+  
+   /*
+   * Call "performQuack()" when you want a class instance to implement
+   * one of the three "quack" behaviors created earlier
+   */
   public performQuack(): void {
     this.quackbehavior.quack();
   }
@@ -102,4 +110,4 @@ class Mallard extends Duck {
 }
 
 // Class instances
-var joe = new Mallard( new NoFly(), new MuteQuack() );
+var joe: Duck = new Mallard( new NoFly(), new MuteQuack() );
