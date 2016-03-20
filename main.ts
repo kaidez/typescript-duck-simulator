@@ -84,4 +84,7 @@ class Duck {
 
 
 // Mallard derived class will go here...
+
+
+// Class instances
 var joe = new Duck( new NoFly(), new MuteQuack() );
