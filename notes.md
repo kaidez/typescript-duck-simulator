@@ -12,4 +12,6 @@
 
 * read up on "static members".
 
+* make sure to undertand the firm definition of "derived class"
+
 * you can either "Go to a Definition" and jump to to where your code is referenced or "Peek at a Definition" and see the code from where you are.
