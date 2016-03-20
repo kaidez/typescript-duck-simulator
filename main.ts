@@ -111,4 +111,4 @@ class Mallard extends Duck {
 }
 
 // Class instances
-var joe: Duck = new Mallard( new NoFly(), new MuteQuack() );
+let joe: Duck = new Mallard( new NoFly(), new MuteQuack() );
