@@ -93,7 +93,7 @@ abstract class Duck {
     this.quackbehavior.quack();
   }
   
-  //
+  // Let Duck instances implement the display method however they want
   abstract display(): void;
   
 }
