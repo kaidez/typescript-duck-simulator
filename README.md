@@ -10,6 +10,8 @@ Some links that helped me...
 
 * <a href="http://www.typescriptlang.org/Handbook">The Official TypeScript Handbook</a> (probably your first stop)
 
+* <a href="https://channel9.msdn.com/posts/Anders-Hejlsberg-Introducing-TypeScript">Anders Hejlsberg: Introducing TypeScript</a> (screencast TypeScript walk-thru from the guy that created the language...MAYBE your second stop)
+
 * <a href="https://www.bricewilson.net/tag/typescript/"> Brice Wilson articles</a> (especially the interface post).
 
 * <a href="http://www.developer.com/lang/top-10-things-to-know-about-typescript.html">Top 10 Things to Know about TypeScript by <em>Bipin Joshi</em></a>
