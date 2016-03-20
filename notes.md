@@ -9,3 +9,5 @@
 * TypeScript can guess types...read up on "typescript type inferance" to learn more
 
 * read up on "function overloading".
+
+* you can either "Go to a Definition" and jump to to where your code is referenced or "Peek at a Definition" and see the code from where you are.
