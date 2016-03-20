@@ -40,15 +40,19 @@ var MuteQuack = (function () {
     return MuteQuack;
 }());
 var Duck = (function () {
-    function Duck(flybehavior, quackbehavior) {
+    function Duck(flybehavior, quackbehavior, name) {
         this.flybehavior = flybehavior;
         this.quackbehavior = quackbehavior;
+        this.name = name;
     }
     Duck.prototype.executeFly = function () {
         this.flybehavior.fly();
     };
     Duck.prototype.executeQuack = function () {
         this.quackbehavior.quack();
+    };
+    Duck.prototype.display = function () {
+        return console.log(this.name);
     };
     return Duck;
 }());

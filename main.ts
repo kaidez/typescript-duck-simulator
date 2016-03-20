@@ -52,10 +52,12 @@ class Duck {
   
 	private flybehavior: FlyBehavior;
   private quackbehavior: QuackBehavior;
+  name: string;
   
-  constructor(flybehavior: FlyBehavior, quackbehavior: QuackBehavior) {
+  constructor( flybehavior: FlyBehavior, quackbehavior: QuackBehavior, name: string ) {
     this.flybehavior = flybehavior;
     this.quackbehavior = quackbehavior;
+    this.name = name;
   }
 
   public executeFly(): void {
@@ -64,5 +66,9 @@ class Duck {
 
   public executeQuack(): void {
     this.quackbehavior.quack();
+  }
+  
+  public display(): void {
+    return console.log( this.name );
   }
 }
