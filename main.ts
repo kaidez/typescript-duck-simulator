@@ -8,42 +8,68 @@
  * =====================================================================
  */
 
-// FLY BEHAVIOR INTERFACE
-// Encapsulate what varies...like how ducks fly
+/*
+ * FLY BEHAVIOR INTERFACE
+ * Encapsulate what varies...like the fly() method that's different
+ * across all the ducks
+ */
 interface FlyBehavior {
 	fly(): void;
 }
 
+/*
+ * Create a class that lets "fly()" implement some sort of
+ * "FlyWithWings" behavior
+ */
 class FlyWithWings implements FlyBehavior {
 	public fly(): void {
 		return console.log("I'm flying!!");
 	}
 }
 
+/*
+ * Create a class that lets "fly()" implement some sort of "NoFly"
+ * behavior
+ */
 class NoFly implements FlyBehavior {
 	public fly(): void {
 		return console.log("I can't fly!!");
 	}
 }
 
-// QUACK BEHAVIOR INTERFACE
-// Encapsulate what varies...like how ducks quack
+/*
+ * QUACK BEHAVIOR INTERFACE
+ * Encapsulate what varies...like the quack() method that's different
+ * across all the ducks
+ */
 interface QuackBehavior {
 	quack(): void;
 }
 
+/*
+ * Create a class that lets "quack()" implement some sort of
+ * "Quack" behavior
+ */
 class Quack implements QuackBehavior {
 	public quack(): void {
 		return console.log("I'm quacking!!");
 	}
 }
 
+/*
+ * Create a class that lets "quack()" implement some sort of
+ * "Squeak" behavior
+ */
 class Squeak implements QuackBehavior {
 	public quack(): void {
 		return console.log("I'm squeaking!!");
 	}
 }
 
+/*
+ * Create a class that lets "quack()" implement some sort of
+ * "MuteQuack" behavior
+ */
 class MuteQuack implements QuackBehavior {
 	public quack(): void {
 		return console.log("I don't quack!!");

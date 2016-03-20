@@ -4,6 +4,10 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
+/*
+ * Create a class that lets "fly()" implement some sort of
+ * "FlyWithWings" behavior
+ */
 var FlyWithWings = (function () {
     function FlyWithWings() {
     }
@@ -12,6 +16,10 @@ var FlyWithWings = (function () {
     };
     return FlyWithWings;
 }());
+/*
+ * Create a class that lets "fly()" implement some sort of "NoFly"
+ * behavior
+ */
 var NoFly = (function () {
     function NoFly() {
     }
@@ -20,6 +28,10 @@ var NoFly = (function () {
     };
     return NoFly;
 }());
+/*
+ * Create a class that lets "quack()" implement some sort of
+ * "Quack" behavior
+ */
 var Quack = (function () {
     function Quack() {
     }
@@ -28,6 +40,10 @@ var Quack = (function () {
     };
     return Quack;
 }());
+/*
+ * Create a class that lets "quack()" implement some sort of
+ * "Squeak" behavior
+ */
 var Squeak = (function () {
     function Squeak() {
     }
@@ -36,6 +52,10 @@ var Squeak = (function () {
     };
     return Squeak;
 }());
+/*
+ * Create a class that lets "quack()" implement some sort of
+ * "MuteQuack" behavior
+ */
 var MuteQuack = (function () {
     function MuteQuack() {
     }
