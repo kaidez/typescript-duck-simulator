@@ -70,11 +70,11 @@ class Duck {
     this.quackbehavior = quackbehavior;
   }
 
-  public executeFly(): void {
+  public performFly(): void {
     this.flybehavior.fly();
   }
 
-  public executeQuack(): void {
+  public performQuack(): void {
     this.quackbehavior.quack();
   }
   

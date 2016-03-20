@@ -55,10 +55,10 @@ var Duck = (function () {
         this.flybehavior = flybehavior;
         this.quackbehavior = quackbehavior;
     }
-    Duck.prototype.executeFly = function () {
+    Duck.prototype.performFly = function () {
         this.flybehavior.fly();
     };
-    Duck.prototype.executeQuack = function () {
+    Duck.prototype.performQuack = function () {
         this.quackbehavior.quack();
     };
     Duck.prototype.display = function () {
