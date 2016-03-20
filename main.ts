@@ -57,7 +57,8 @@ class MuteQuack implements QuackBehavior {
  */
 
 /*
- * Create an abstract/base "Duck" class that it will never be directly instantiated.
+ * Create an abstract/base "Duck" class that it will never be directly
+ * instantiated.
  */
 class Duck {
   

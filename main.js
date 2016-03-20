@@ -45,7 +45,8 @@ var MuteQuack = (function () {
  * =====================================================================
  */
 /*
- * Create an abstract/base "Duck" class that it will never be directly instantiated.
+ * Create an abstract/base "Duck" class that it will never be directly
+ * instantiated.
  */
 var Duck = (function () {
     function Duck(flybehavior, quackbehavior, name) {
