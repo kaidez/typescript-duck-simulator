@@ -52,14 +52,10 @@ class MuteQuack implements QuackBehavior {
 
 /*
  * =====================================================================
- * CLASSES
+ * DUCK ABSTRACT CLASSES: a class meant to be inherited from and no more
  * =====================================================================
  */
 
-/*
- * Create an abstract/base "Duck" class that it will never be directly
- * instantiated.
- */
 abstract class Duck {
   
   /*
@@ -74,6 +70,7 @@ abstract class Duck {
 	private flybehavior: FlyBehavior;
   private quackbehavior: QuackBehavior;
   
+  // Define the Duck's constructor function
   constructor( flybehavior: FlyBehavior, quackbehavior: QuackBehavior, public name: string = "Anonymous Duck" ) {
     this.flybehavior = flybehavior;
     this.quackbehavior = quackbehavior;
@@ -92,7 +89,13 @@ abstract class Duck {
 }
 
 
-// Mallard concrete/derived class will go here...
+/*
+ * =====================================================================
+ * CONCRETE CLASSES: classes that actually get instantiated
+ * =====================================================================
+ */
+
+// Mallard concrete class
 class Mallard extends Duck {
   
 }

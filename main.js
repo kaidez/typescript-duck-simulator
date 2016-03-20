@@ -46,14 +46,11 @@ var MuteQuack = (function () {
 }());
 /*
  * =====================================================================
- * CLASSES
+ * DUCK ABSTRACT CLASSES: a class meant to be inherited from and no more
  * =====================================================================
  */
-/*
- * Create an abstract/base "Duck" class that it will never be directly
- * instantiated.
- */
 var Duck = (function () {
+    // Define the Duck's constructor function
     function Duck(flybehavior, quackbehavior, name) {
         if (name === void 0) { name = "Anonymous Duck"; }
         this.name = name;
@@ -68,7 +65,12 @@ var Duck = (function () {
     };
     return Duck;
 }());
-// Mallard concrete/derived class will go here...
+/*
+ * =====================================================================
+ * CONCRETE CLASSES: classes that actually get instantiated
+ * =====================================================================
+ */
+// Mallard concrete class
 var Mallard = (function (_super) {
     __extends(Mallard, _super);
     function Mallard() {
