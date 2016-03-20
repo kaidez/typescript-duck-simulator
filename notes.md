@@ -6,7 +6,7 @@
 
 * use `void` when a property doesn't have a specific type.
 
-* TypeScript can guess types...read up on "typescript type inference" to learn more.
+* TypeScript can guess types using "type inference." If TypeScript can't determine the type, it assumes it's a generic object, which makes sense since all this is just JavaScript.
 
 * read up on "function overloading".
 
