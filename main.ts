@@ -72,3 +72,5 @@ class Duck {
     return console.log( this.name );
   }
 }
+
+var joe = new Duck( new NoFly(), new MuteQuack(), "joe" );

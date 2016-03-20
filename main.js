@@ -56,3 +56,4 @@ var Duck = (function () {
     };
     return Duck;
 }());
+var joe = new Duck(new NoFly(), new MuteQuack(), "joe");
