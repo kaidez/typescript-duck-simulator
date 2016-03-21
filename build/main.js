@@ -133,7 +133,6 @@ var HelperLibrary;
  * MALLARD CLASS: inherits from the core "Duck" class
  * =====================================================================
  */
-// Mallard concrete class
 var Mallard = (function (_super) {
     __extends(Mallard, _super);
     function Mallard() {

@@ -7,7 +7,6 @@
  * =====================================================================
  */
 
-// Mallard concrete class
 class Mallard extends Duck {
 	
 	public display(): void {
