@@ -161,7 +161,7 @@ var Mallard = (function (_super) {
  * Code that should be executed in the browser should go here.
  * =====================================================================
  */
-// Class instances are automaically created on page-load with an IIFE
+// Class instances are automatically created on page-load with an IIFE
 (function () {
     // Create instances of "Mallard"
     var joe = new Mallard(new Fly.NoFly(), new Quack.MuteQuack(), "Howard");

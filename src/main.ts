@@ -9,7 +9,7 @@
  * =====================================================================
  */
 
-// Class instances are automaically created on page-load with an IIFE
+// Class instances are automatically created on page-load with an IIFE
 (function(){
 	
 	// Create instances of "Mallard"
