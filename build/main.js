@@ -118,9 +118,11 @@ var Mallard = (function (_super) {
         _super.apply(this, arguments);
     }
     Mallard.prototype.display = function () {
-        return console.log("I am a Mallard");
+        var setDiv = document.createElement("div");
+        setDiv.setAttribute("id", this.name);
+        return console.log(setDiv);
     };
     return Mallard;
 }(Duck));
 // Class instances
-var joe = new Mallard(new Fly.NoFly(), new Quack.MuteQuack());
+var joe = new Mallard(new Fly.NoFly(), new Quack.MuteQuack(), "Frankie");

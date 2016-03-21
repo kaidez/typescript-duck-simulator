@@ -8,10 +8,16 @@
 
 // Mallard concrete class
 class Mallard extends Duck {
+  
   public display(): void {
-    return console.log("I am a Mallard");
+    
+    let setDiv = document.createElement( "div" );
+    
+    setDiv.setAttribute( "id", this.name );
+    return console.log( setDiv );
+    
   } 
 }
 
 // Class instances
-let joe: Duck = new Mallard( new Fly.NoFly(), new Quack.MuteQuack() );
+let joe: Duck = new Mallard( new Fly.NoFly(), new Quack.MuteQuack(), "Frankie" );
