@@ -1,4 +1,6 @@
 /// <reference path="Duck.ts" />
+/// <reference path="../typings/jquery/jquery.d.ts" />
+import $ from "jquery";
 
 /*
  * =====================================================================
