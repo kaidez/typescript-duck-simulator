@@ -19,7 +19,7 @@ abstract class Duck {
    * JavaScript's natural dynamic nature are more than enough, but
    * please let me know if I'm wrong. 
    */
-	private flybehavior: Fly.FlyBehavior;
+  private flybehavior: Fly.FlyBehavior;
   private quackbehavior: Quack.QuackBehavior;
   
   // Define the Duck's constructor function
