@@ -7,3 +7,6 @@ Thumbs.db
 .vscode/
 .tsd-debug.log
 typings/
+src/Duck.js
+src/Fly.js
+src/Quack.js
