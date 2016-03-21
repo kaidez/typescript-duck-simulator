@@ -1,4 +1,5 @@
 /// <reference path="Duck.ts" />
+/// <reference path="HelperLibrary.ts" />
 
 /*
  * =====================================================================
@@ -16,9 +17,9 @@ class Mallard extends Duck {
         setDiv = document.createElement( "div" ),
         nameHeader = document.createElement( "p" ),
         typeHeader = document.createElement( "p" ),
-        lowerCaseIdName = this.name.toLowerCase();
-    
-    setDiv.setAttribute( "id", lowerCaseIdName );
+        newName = HelperLibrary.setDuckElementId( this.name );
+
+    setDiv.setAttribute( "id", newName );
     setDiv.setAttribute( "class", "duck-container" );
     nameHeader.innerHTML = this.name;
     typeHeader.innerHTML = "Type: Mallard";
