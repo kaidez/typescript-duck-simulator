@@ -8,9 +8,9 @@
  */
 
 class Mallard extends Duck {
-	
+
 	public display(): void {
-		
+
 		let targetElement = document.getElementById( "content" ),
 				documentFragment = document.createDocumentFragment(),
 				setDiv = document.createElement( "div" ),
@@ -26,8 +26,8 @@ class Mallard extends Duck {
 		setDiv.appendChild( nameHeader );
 		setDiv.appendChild( typeHeader );
 		documentFragment.appendChild( setDiv );
-		
+
 		targetElement.appendChild( documentFragment );
 
-	} 
+	}
 }
