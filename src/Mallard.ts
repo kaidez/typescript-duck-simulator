@@ -15,6 +15,8 @@ class Mallard extends Duck {
         setDiv = document.createElement( "div" );
     
     setDiv.setAttribute( "id", this.name );
+    setDiv.setAttribute( "class", "duck-container" );
+    
     documentFragment.appendChild( setDiv );
     
     return console.log( documentFragment );
