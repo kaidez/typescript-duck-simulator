@@ -124,5 +124,7 @@ var Mallard = (function (_super) {
     };
     return Mallard;
 }(Duck));
+/// <reference path="Duck.ts" />
+/// <reference path="Mallard.ts" />
 // Class instances
 var joe = new Mallard(new Fly.NoFly(), new Quack.MuteQuack(), "Frankie");
