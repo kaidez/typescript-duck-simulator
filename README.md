@@ -6,7 +6,7 @@ The content in the _Design Patterns in TypeScript_ repo link below already says 
 
 All still in progress...keep watching!!!!
 
-Some links that helped me...
+## Some links that helped me...
 
 * <a href="http://www.typescriptlang.org/Handbook">The Official TypeScript Handbook</a> (probably your first stop)
 
@@ -16,6 +16,8 @@ Some links that helped me...
 
 * <a href="http://www.developer.com/lang/top-10-things-to-know-about-typescript.html">Top 10 Things to Know about TypeScript by <em>Bipin Joshi</em></a>
 
-* <a href="https://github.com/typings/typings">Typings: the TypeScript Package Manager</a>
-
 * <a href="https://github.com/torokmark/design_patterns_in_typescript">Design Patterns in TypeScript</a>
+
+## Stuff that didn't help me but I want to read up on...
+
+* <a href="https://github.com/typings/typings">Typings:</a> the TypeScript Package Manager. I found it difficult to set up and passed on using it, but I'll figure it out eventually. 
