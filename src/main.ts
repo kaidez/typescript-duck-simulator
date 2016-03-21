@@ -1,6 +1,5 @@
 /// <reference path="Duck.ts" />
 
-
 /*
  * =====================================================================
  * CONCRETE CLASSES: classes that actually get instantiated
