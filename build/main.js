@@ -108,7 +108,7 @@ var Duck = (function () {
 /// <reference path="Duck.ts" />
 /*
  * =====================================================================
- * CONCRETE CLASSES: classes that actually get instantiated
+ * MALLARD CLASS: inherits from the core "Duck" class
  * =====================================================================
  */
 // Mallard concrete class

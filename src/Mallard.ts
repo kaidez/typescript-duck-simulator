@@ -2,7 +2,7 @@
 
 /*
  * =====================================================================
- * CONCRETE CLASSES: classes that actually get instantiated
+ * MALLARD CLASS: inherits from the core "Duck" class
  * =====================================================================
  */
 
