@@ -106,6 +106,7 @@ var Duck = (function () {
     };
     return Duck;
 }());
+/// <reference path="Duck.ts" />
 /*
  * =====================================================================
  * CONCRETE CLASSES: classes that actually get instantiated
