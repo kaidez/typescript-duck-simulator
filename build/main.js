@@ -78,7 +78,7 @@ var Quack;
 /// <reference path="Quack.ts" />
 /*
  * =====================================================================
- * DUCK ABSTRACT CLASSES: a class meant to be inherited from and no more
+ * DUCK CLASS: an abstract class for other ducks inherit from & no more
  * =====================================================================
  */
 var Duck = (function () {
