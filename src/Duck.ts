@@ -14,7 +14,7 @@ abstract class Duck {
 	 * reference the two behavior classes (FlyBehavior and QuackBehavior)
 	 * ==================================================================
 	 * NOTE: the "Head First"" book takes and extra step with these
-	 *  behaviors and uses setter methods to make them more dynamic. I
+	 * behaviors and uses setter methods to make them more dynamic. I
 	 * didn't do that here because I don't see the need for it. I think
 	 * JavaScript's natural dynamic nature are more than enough, but
 	 * please let me know if I'm wrong. 
