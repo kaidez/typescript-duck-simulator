@@ -22,7 +22,7 @@ class Mallard extends Duck {
 		setDiv.setAttribute( "class", "duck-container" );
 		nameHeader.innerHTML = this.name;
 		typeHeader.innerHTML = "Type: Mallard";
-		
+
 		setDiv.appendChild( nameHeader );
 		setDiv.appendChild( typeHeader );
 		documentFragment.appendChild( setDiv );
