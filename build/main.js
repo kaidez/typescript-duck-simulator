@@ -105,7 +105,27 @@ var Duck = (function () {
     };
     return Duck;
 }());
+/*
+ * =====================================================================
+ * HelperLibrary: generic methods that help do stuff in other parts of
+ * the code. Classes and Interface signatures should NOT go here!!!!!!!!
+ * =====================================================================
+ */
+var HelperLibrary;
+(function (HelperLibrary) {
+    /*
+     * setDuckElementId(): a method meant to take the "name" parameter
+     * passed to a duck instance and then make lowercase first, then
+     * remove any whitespace. "name" is represented by the method's
+     * "element" paramter
+     */
+    function setDuckElementId(element) {
+        return element.toLowerCase().replace(/\s+/g, '');
+    }
+    HelperLibrary.setDuckElementId = setDuckElementId;
+})(HelperLibrary || (HelperLibrary = {}));
 /// <reference path="Duck.ts" />
+/// <reference path="HelperLibrary.ts" />
 /*
  * =====================================================================
  * MALLARD CLASS: inherits from the core "Duck" class
@@ -118,8 +138,8 @@ var Mallard = (function (_super) {
         _super.apply(this, arguments);
     }
     Mallard.prototype.display = function () {
-        var targetElement = document.getElementById("content"), documentFragment = document.createDocumentFragment(), setDiv = document.createElement("div"), nameHeader = document.createElement("p"), typeHeader = document.createElement("p"), lowerCaseIdName = this.name.toLowerCase();
-        setDiv.setAttribute("id", lowerCaseIdName);
+        var targetElement = document.getElementById("content"), documentFragment = document.createDocumentFragment(), setDiv = document.createElement("div"), nameHeader = document.createElement("p"), typeHeader = document.createElement("p"), newName = HelperLibrary.setDuckElementId(this.name);
+        setDiv.setAttribute("id", newName);
         setDiv.setAttribute("class", "duck-container");
         nameHeader.innerHTML = this.name;
         typeHeader.innerHTML = "Type: Mallard";
@@ -133,4 +153,4 @@ var Mallard = (function (_super) {
 /// <reference path="Duck.ts" />
 /// <reference path="Mallard.ts" />
 // Class instances
-var joe = new Mallard(new Fly.NoFly(), new Quack.MuteQuack(), "Frankie");
+var joe = new Mallard(new Fly.NoFly(), new Quack.MuteQuack(), "Howard");
