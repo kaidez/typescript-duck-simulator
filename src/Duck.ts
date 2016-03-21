@@ -3,7 +3,7 @@
 
 /*
  * =====================================================================
- * DUCK CLASS: an abstract class for other ducks inherit from & no more
+ * DUCK CLASS: core abstract class for other ducks inherit from
  * =====================================================================
  */
 
