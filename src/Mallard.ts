@@ -11,10 +11,13 @@ class Mallard extends Duck {
   
   public display(): void {
     
-    let setDiv = document.createElement( "div" );
+    let documentFragment = document.createDocumentFragment(),
+        setDiv = document.createElement( "div" );
     
     setDiv.setAttribute( "id", this.name );
-    return console.log( setDiv );
+    documentFragment.appendChild( setDiv );
+    
+    return console.log( documentFragment );
     
   } 
 }
