@@ -2,4 +2,4 @@
 /// <reference path="Mallard.ts" />
 
 // Class instances
-let joe: Duck = new Mallard( new Fly.NoFly(), new Quack.MuteQuack(), "Frankie" );
+let joe: Duck = new Mallard( new Fly.NoFly(), new Quack.MuteQuack(), "Howard" );
