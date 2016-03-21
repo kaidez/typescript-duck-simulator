@@ -5,3 +5,5 @@ Thumbs.db
 .zip
 .pot
 .vscode/
+.tsd-debug.log
+typings/
