@@ -14,6 +14,7 @@
   "author": "kaidez",
   "license": "ISC",
   "devDependencies": {
+    "jquery": "^2.2.2",
     "typescript": "^1.8.9"
   }
 }
