@@ -21,7 +21,7 @@ abstract class Duck {
    */
   private flybehavior: Fly.FlyBehavior;
   private quackbehavior: Quack.QuackBehavior;
-  
+
   // Define the Duck's constructor function
   constructor( flybehavior: Fly.FlyBehavior, quackbehavior: Quack.QuackBehavior, public name: string = "Anonymous Duck" ) {
     this.flybehavior = flybehavior;
@@ -35,7 +35,7 @@ abstract class Duck {
   public performFly(): void {
     this.flybehavior.fly();
   }
-  
+
   /*
    * Call "performQuack()" when you want a class instance to implement
    * one of the three "quack" behaviors created earlier
