@@ -107,8 +107,10 @@ var Duck = (function () {
 }());
 /*
  * =====================================================================
- * HelperLibrary: generic methods that help do stuff in other parts of
- * the code. Classes and Interface signatures should NOT go here!!!!!!!!
+ * MODULE: HelperLibrary.ts
+ *
+ * A few generic methods that help do stuff in other parts of the code.
+ * Classes and Interface signatures should NOT go here!!!!!!!!
  * =====================================================================
  */
 var HelperLibrary;
@@ -116,8 +118,8 @@ var HelperLibrary;
     /*
      * setDuckElementId(): a method meant to take the "name" parameter
      * passed to a duck instance and then make lowercase first, then
-     * remove any whitespace. "name" is represented by the method's
-     * "element" paramter
+     * remove any whitespace. "name" is represented by the duck instance's
+     * "element" parameter
      */
     function setDuckElementId(element) {
         return element.toLowerCase().replace(/\s+/g, '');
@@ -152,5 +154,17 @@ var Mallard = (function (_super) {
 }(Duck));
 /// <reference path="Duck.ts" />
 /// <reference path="Mallard.ts" />
-// Class instances
-var joe = new Mallard(new Fly.NoFly(), new Quack.MuteQuack(), "Howard");
+/*
+ * =====================================================================
+ * main.ts
+ *
+ * Code that should be executed in the browser should go here.
+ * =====================================================================
+ */
+// Class instances are automaically created on page-load with an IIFE
+(function () {
+    // Create instances of "Mallard"
+    var joe = new Mallard(new Fly.NoFly(), new Quack.MuteQuack(), "Howard");
+    // Run the "display()" method for each instance
+    joe.display();
+})();
