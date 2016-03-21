@@ -4,7 +4,6 @@
   "description": "The classic Duck Simulator from \"Head First Design Patterns\" written in TypeScript",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "watch-ts": "tsc --out build/main.js src/main.ts -w"
   },
   "repository": {
@@ -14,7 +13,6 @@
   "author": "kaidez",
   "license": "ISC",
   "devDependencies": {
-    "jquery": "^2.2.2",
     "typescript": "^1.8.9"
   }
 }
