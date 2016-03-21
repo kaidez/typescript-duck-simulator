@@ -3,7 +3,7 @@
 
 /*
  * =====================================================================
- * DUCK ABSTRACT CLASSES: a class meant to be inherited from and no more
+ * DUCK CLASS: an abstract class for other ducks inherit from & no more
  * =====================================================================
  */
 
@@ -13,9 +13,9 @@ abstract class Duck {
    * Define "flybehavior" and "quackbehavior" instance variables that
    * reference the two behavior classes (FlyBehavior and QuackBehavior)
    * ==================================================================
-   * NOTE: the Head First book takes and extra step with these behavior
-   * and uses setter methods to make them more dynamic. I didn't do
-   * that here because I don't see the need for it. I think
+   * NOTE: the "Head First"" book takes and extra step with these
+   *  behaviors and uses setter methods to make them more dynamic. I
+   * didn't do that here because I don't see the need for it. I think
    * JavaScript's natural dynamic nature are more than enough, but
    * please let me know if I'm wrong. 
    */
