@@ -12,7 +12,7 @@ module HelperLibrary {
 	/*
 	 * setDuckElementId(): a method meant to take the "name" parameter
 	 * passed to a duck instance and then make lowercase first, then
-	 * remove any whitespace. "name" is represented by the duck instance's
+	 * remove any whitespace. "name" is represented by the method's
 	 * "element" parameter
 	 */
 	export function setDuckElementId( element: string ) {
