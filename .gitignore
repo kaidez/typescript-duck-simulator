@@ -10,3 +10,6 @@ typings/
 src/Duck.js
 src/Fly.js
 src/Quack.js
+src/HelperLibrary.js
+src/Mallard.js
+src/main.js
