@@ -18,6 +18,8 @@ All still in progress...keep watching!!!!
 
 * <a href="https://github.com/torokmark/design_patterns_in_typescript">Design Patterns in TypeScript</a>
 
+* <a href="http://stackoverflow.com/questions/26540165/typescript-and-libraries-such-as-jquery-with-d-ts-files">Stack Overflow post explaining how jQuery works in TypeScript</a> (not like you think)
+
 ## Stuff that didn't help me but I want to read up on...
 
-* <a href="https://github.com/typings/typings">Typings:</a> the TypeScript Package Manager. I found it difficult to set up and passed on using it, but I'll figure it out eventually. 
+* <a href="https://github.com/typings/typings">Typings:</a> the TypeScript Package Manager. I found it difficult to set up and passed on using it, but I'll figure it out eventually.
