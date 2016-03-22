@@ -20,6 +20,8 @@ All still in progress...keep watching!!!!
 
 * <a href="http://stackoverflow.com/questions/26540165/typescript-and-libraries-such-as-jquery-with-d-ts-files">Stack Overflow post explaining how jQuery works in TypeScript</a> (not like you think)
 
-## Stuff that didn't help me but I want to read up on...
+## Some tools...
 
-* <a href="https://github.com/typings/typings">Typings:</a> the TypeScript Package Manager. I found it difficult to set up and passed on using it, but I'll figure it out eventually.
+* <a href="https://code.visualstudio.com/">Visual Studio Code</a>. You probably won't abandon your current IDE for this, but it's a GREAT tool for developing TypeScript...and learning it.
+
+* <a href="https://github.com/typings/typings">Typings</a>,  the TypeScript Package Manager. I only used it a little for this project, but I don't see it lasting long.
