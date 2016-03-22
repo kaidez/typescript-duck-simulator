@@ -30,4 +30,5 @@ class Mallard extends Duck {
 		targetElement.appendChild( documentFragment );
 
 	}
+
 }
