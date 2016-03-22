@@ -128,6 +128,7 @@ var HelperLibrary;
 })(HelperLibrary || (HelperLibrary = {}));
 /// <reference path="Duck.ts" />
 /// <reference path="HelperLibrary.ts" />
+/// <reference path="../typings/jquery/jquery.d.ts" />
 /*
  * =====================================================================
  * MALLARD CLASS: inherits from the core "Duck" class
