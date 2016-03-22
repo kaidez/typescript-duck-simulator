@@ -1,6 +1,7 @@
 /// <reference path="Duck.ts" />
 /// <reference path="HelperLibrary.ts" />
-
+/// <reference path="../typings/jquery/jquery.d.ts" />
+declare var $: JQueryStatic;
 /*
  * =====================================================================
  * MALLARD CLASS: inherits from the core "Duck" class
@@ -26,7 +27,6 @@ class Mallard extends Duck {
 		setDiv.appendChild( nameHeader );
 		setDiv.appendChild( typeHeader );
 		documentFragment.appendChild( setDiv );
-
 		targetElement.appendChild( documentFragment );
 
 	}
