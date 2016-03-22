@@ -2,6 +2,7 @@
 /// <reference path="HelperLibrary.ts" />
 /// <reference path="../typings/jquery/jquery.d.ts" />
 declare var $: JQueryStatic;
+
 /*
  * =====================================================================
  * MALLARD CLASS: inherits from the core "Duck" class
@@ -23,7 +24,6 @@ class Mallard extends Duck {
 		setDiv.setAttribute( "class", "duck-container" );
 		nameHeader.innerHTML = this.name;
 		typeHeader.innerHTML = "Type: Mallard";
-
 		setDiv.appendChild( nameHeader );
 		setDiv.appendChild( typeHeader );
 		documentFragment.appendChild( setDiv );
