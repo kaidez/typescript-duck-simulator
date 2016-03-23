@@ -252,19 +252,27 @@ var Decoy = (function (_super) {
  */
 // Class instances are automatically created on page-load with an IIFE
 (function () {
-    // Create instances of "Redhead"
+    // Create instance of a "Redhead"
+    var stacey = new Redhead(new Fly.NoFly(), new Quack.MuteQuack(), "Stacy");
+    // Run the "display()" method for the Redhead
+    stacey.display();
+    // Create instance of a "RubberDuck"
+    var jerrySeinfeld = new Rubber(new Fly.NoFly(), new Quack.MuteQuack(), "Jerry Seinfeld");
+    // Run the "display()" method for each instance
+    jerrySeinfeld.display();
+    // Create instance of a "Redhead"
     var bobby = new Redhead(new Fly.NoFly(), new Quack.MuteQuack(), "Bobby");
     // Run the "display()" method for the Redhead
     bobby.display();
-    // Create instances of "Mallard"
+    // Create instance of a "Mallard"
     var joe = new Mallard(new Fly.NoFly(), new Quack.MuteQuack(), "Howard The Duck");
     // Run the "display()" method for each instance
     joe.display();
-    // Create instances of "RubberDuck"
+    // Create instance of a "RubberDuck"
     var john = new Rubber(new Fly.NoFly(), new Quack.MuteQuack(), "John");
     // Run the "display()" method for each instance
     john.display();
-    // Create instances of "DecoyDuck"
+    // Create instance of a "DecoyDuck"
     var james = new Decoy(new Fly.NoFly(), new Quack.MuteQuack(), "James");
     // Run the "display()" method for each instance
     james.display();
