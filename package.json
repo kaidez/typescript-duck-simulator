@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "watch-ts": "tsc --out build/main.js src/main.ts -w",
-    "copy-bootstrap": "ncp node_modules/bootstrap/dist/css/bootstrap.css css-build/bootstrap.css"
+    "copy-bootstrap": "ncp node_modules/bootstrap/dist/css/bootstrap.css build/bootstrap.css"
   },
   "repository": {
     "type": "git",
