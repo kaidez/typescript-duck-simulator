@@ -1,5 +1,6 @@
 /// <reference path="Duck.ts" />
 /// <reference path="Mallard.ts" />
+/// <reference path="RubberDuck.ts" />
 
 /*
  * =====================================================================
@@ -17,5 +18,13 @@
 
 	// Run the "display()" method for each instance
 	joe.display();
+
+
+	// Create instances of "RubberDuck"
+	let john: Duck = new RubberDuck( new Fly.NoFly(), new Quack.MuteQuack(), "John" );
+
+	// Run the "display()" method for each instance
+	john.display();
+
 
 })();
