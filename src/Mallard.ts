@@ -1,7 +1,5 @@
 /// <reference path="Duck.ts" />
 /// <reference path="HelperLibrary.ts" />
-/// <reference path="../typings/jquery/jquery.d.ts" />
-declare var $: JQueryStatic;
 
 /*
  * =====================================================================
@@ -13,9 +11,10 @@ class Mallard extends Duck {
 
 	public display(): void {
 
-		let targetElement = document.getElementById( "content" ),
+		let targetElement = document.getElementById( "row-container" ),
 				documentFragment = document.createDocumentFragment(),
 				setDiv = document.createElement( "div" ),
+				duckImage = document.createElement( "img" ),
 				nameHeader = document.createElement( "p" ),
 				typeHeader = document.createElement( "p" ),
 				newName = HelperLibrary.setDuckElementId( this.name );
@@ -24,6 +23,9 @@ class Mallard extends Duck {
 		setDiv.setAttribute( "class", "duck-container" );
 		nameHeader.innerHTML = this.name;
 		typeHeader.innerHTML = "Type: Mallard";
+		duckImage.setAttribute("src", "images/mallardDuck.jpg");
+
+		setDiv.appendChild( duckImage );
 		setDiv.appendChild( nameHeader );
 		setDiv.appendChild( typeHeader );
 		documentFragment.appendChild( setDiv );
