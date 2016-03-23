@@ -7,7 +7,7 @@
  * =====================================================================
  */
 
-class RubberDuck extends Duck {
+class Rubber extends Duck {
 
 	public display(): void {
 
@@ -26,7 +26,7 @@ class RubberDuck extends Duck {
 
 		nameHeader.style.fontWeight = "900";
     nameHeader.innerHTML = this.name;
-		typeHeader.innerHTML = "Type: Rubber Duck";
+		typeHeader.innerHTML = "Type: Rubber";
 
 
 		setDiv.appendChild( duckImage );

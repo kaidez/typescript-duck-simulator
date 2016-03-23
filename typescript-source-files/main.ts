@@ -1,7 +1,7 @@
 /// <reference path="classes/Duck.ts" />
 /// <reference path="classes/subclasses/Mallard.ts" />
 /// <reference path="classes/subclasses/Redhead.ts" />
-/// <reference path="classes/subclasses/RubberDuck.ts" />
+/// <reference path="classes/subclasses/Rubber.ts" />
 /// <reference path="classes/subclasses/Decoy.ts" />
 
 /*
@@ -32,7 +32,7 @@
 
 
 	// Create instances of "RubberDuck"
-	let john: Duck = new RubberDuck( new Fly.NoFly(), new Quack.MuteQuack(), "John" );
+	let john: Duck = new Rubber( new Fly.NoFly(), new Quack.MuteQuack(), "John" );
 
 	// Run the "display()" method for each instance
 	john.display();

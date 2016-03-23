@@ -3,7 +3,7 @@
 
 /*
  * =====================================================================
- * DECOY CLASS: inherits from the core "Duck" class
+ * DECOY DUCK CLASS: inherits from the core "Duck" class
  * =====================================================================
  */
 

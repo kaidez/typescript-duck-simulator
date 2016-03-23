@@ -3,7 +3,7 @@
 
 /*
  * =====================================================================
- * REDHEAD CLASS: inherits from the core "Duck" class
+ * REDHEAD DUCK CLASS: inherits from the core "Duck" class
  * =====================================================================
  */
 

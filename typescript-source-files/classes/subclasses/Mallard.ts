@@ -3,7 +3,7 @@
 
 /*
  * =====================================================================
- * MALLARD CLASS: inherits from the core "Duck" class
+ * MALLARD DUCK CLASS: inherits from the core "Duck" class
  * =====================================================================
  */
 
