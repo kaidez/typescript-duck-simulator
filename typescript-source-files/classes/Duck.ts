@@ -1,5 +1,5 @@
-/// <reference path="Fly.ts" />
-/// <reference path="Quack.ts" />
+/// <reference path="../interfaces/Fly.ts" />
+/// <reference path="../interfaces/Quack.ts" />
 
 /*
  * =====================================================================
@@ -17,7 +17,7 @@ abstract class Duck {
 	 * behaviors and uses setter methods to make them more dynamic. I
 	 * didn't do that here because I don't see the need for it. I think
 	 * JavaScript's natural dynamic nature are more than enough, but
-	 * please let me know if I'm wrong. 
+	 * please let me know if I'm wrong.
 	 */
 	private flybehavior: Fly.FlyBehavior;
 	private quackbehavior: Quack.QuackBehavior;
@@ -43,13 +43,13 @@ abstract class Duck {
 	public performQuack(): void {
 		this.quackbehavior.quack();
 	}
-	
+
 	/*
 	 * All Duck subclass will have their own unique display() method so
 	 * define the signature of this method. This means that each subclass
 	 * MUST have a display() method of some kind or the TypeScript build
-	 * will break. 
+	 * will break.
 	 */
 	abstract display(): void;
-	
+
 }

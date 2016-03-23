@@ -1,6 +1,6 @@
-/// <reference path="Duck.ts" />
-/// <reference path="Mallard.ts" />
-/// <reference path="RubberDuck.ts" />
+/// <reference path="classes/Duck.ts" />
+/// <reference path="classes/subclasses/Mallard.ts" />
+/// <reference path="classes/subclasses/RubberDuck.ts" />
 
 /*
  * =====================================================================

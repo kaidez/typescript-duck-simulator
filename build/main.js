@@ -74,8 +74,8 @@ var Quack;
     }());
     Quack_1.MuteQuack = MuteQuack;
 })(Quack || (Quack = {}));
-/// <reference path="Fly.ts" />
-/// <reference path="Quack.ts" />
+/// <reference path="../interfaces/Fly.ts" />
+/// <reference path="../interfaces/Quack.ts" />
 /*
  * =====================================================================
  * DUCK CLASS: core abstract class for other ducks inherit from
@@ -126,8 +126,8 @@ var HelperLibrary;
     }
     HelperLibrary.setDuckElementId = setDuckElementId;
 })(HelperLibrary || (HelperLibrary = {}));
-/// <reference path="Duck.ts" />
-/// <reference path="HelperLibrary.ts" />
+/// <reference path="../Duck.ts" />
+/// <reference path="../../libs/HelperLibrary.ts" />
 /*
  * =====================================================================
  * MALLARD CLASS: inherits from the core "Duck" class
@@ -154,8 +154,37 @@ var Mallard = (function (_super) {
     };
     return Mallard;
 }(Duck));
-/// <reference path="Duck.ts" />
-/// <reference path="Mallard.ts" />
+/// <reference path="../Duck.ts" />
+/// <reference path="../../libs/HelperLibrary.ts" />
+/*
+ * =====================================================================
+ * RUBBER DUCK CLASS: inherits from the core "Duck" class
+ * =====================================================================
+ */
+var RubberDuck = (function (_super) {
+    __extends(RubberDuck, _super);
+    function RubberDuck() {
+        _super.apply(this, arguments);
+    }
+    RubberDuck.prototype.display = function () {
+        var targetElement = document.getElementById("row-container"), documentFragment = document.createDocumentFragment(), setDiv = document.createElement("div"), duckImage = document.createElement("img"), nameHeader = document.createElement("p"), typeHeader = document.createElement("p"), newName = HelperLibrary.setDuckElementId(this.name);
+        setDiv.setAttribute("id", newName);
+        setDiv.setAttribute("class", "duck-container col-md-4");
+        duckImage.setAttribute("src", "images/rubberDuck.jpg");
+        nameHeader.style.fontWeight = "900";
+        nameHeader.innerHTML = this.name;
+        typeHeader.innerHTML = "Type: Rubber Duck";
+        setDiv.appendChild(duckImage);
+        setDiv.appendChild(nameHeader);
+        setDiv.appendChild(typeHeader);
+        documentFragment.appendChild(setDiv);
+        targetElement.appendChild(documentFragment);
+    };
+    return RubberDuck;
+}(Duck));
+/// <reference path="classes/Duck.ts" />
+/// <reference path="classes/subclasses/Mallard.ts" />
+/// <reference path="classes/subclasses/RubberDuck.ts" />
 /*
  * =====================================================================
  * main.ts
@@ -169,4 +198,8 @@ var Mallard = (function (_super) {
     var joe = new Mallard(new Fly.NoFly(), new Quack.MuteQuack(), "Howard");
     // Run the "display()" method for each instance
     joe.display();
+    // Create instances of "RubberDuck"
+    var john = new RubberDuck(new Fly.NoFly(), new Quack.MuteQuack(), "John");
+    // Run the "display()" method for each instance
+    john.display();
 })();

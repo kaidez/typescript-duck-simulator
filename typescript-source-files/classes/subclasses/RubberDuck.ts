@@ -1,13 +1,13 @@
-/// <reference path="Duck.ts" />
-/// <reference path="HelperLibrary.ts" />
+/// <reference path="../Duck.ts" />
+/// <reference path="../../libs/HelperLibrary.ts" />
 
 /*
  * =====================================================================
- * MALLARD CLASS: inherits from the core "Duck" class
+ * RUBBER DUCK CLASS: inherits from the core "Duck" class
  * =====================================================================
  */
 
-class Mallard extends Duck {
+class RubberDuck extends Duck {
 
 	public display(): void {
 
@@ -22,11 +22,11 @@ class Mallard extends Duck {
 		setDiv.setAttribute( "id", newName );
 		setDiv.setAttribute( "class", "duck-container col-md-4" );
 
-    duckImage.setAttribute( "src", "images/mallardDuck.jpg" );
+    duckImage.setAttribute( "src", "images/rubberDuck.jpg" );
 
 		nameHeader.style.fontWeight = "900";
     nameHeader.innerHTML = this.name;
-		typeHeader.innerHTML = "Type: Mallard";
+		typeHeader.innerHTML = "Type: Rubber Duck";
 
 
 		setDiv.appendChild( duckImage );
