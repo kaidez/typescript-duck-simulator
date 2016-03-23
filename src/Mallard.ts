@@ -21,9 +21,13 @@ class Mallard extends Duck {
 
 		setDiv.setAttribute( "id", newName );
 		setDiv.setAttribute( "class", "duck-container col-md-4" );
-		nameHeader.innerHTML = this.name;
+
+    duckImage.setAttribute( "src", "images/mallardDuck.jpg" );
+
+		nameHeader.style.fontWeight = "900";
+    nameHeader.innerHTML = this.name;
 		typeHeader.innerHTML = "Type: Mallard";
-		duckImage.setAttribute("src", "images/mallardDuck.jpg");
+
 
 		setDiv.appendChild( duckImage );
 		setDiv.appendChild( nameHeader );

@@ -142,9 +142,10 @@ var Mallard = (function (_super) {
         var targetElement = document.getElementById("row-container"), documentFragment = document.createDocumentFragment(), setDiv = document.createElement("div"), duckImage = document.createElement("img"), nameHeader = document.createElement("p"), typeHeader = document.createElement("p"), newName = HelperLibrary.setDuckElementId(this.name);
         setDiv.setAttribute("id", newName);
         setDiv.setAttribute("class", "duck-container col-md-4");
+        duckImage.setAttribute("src", "images/mallardDuck.jpg");
+        nameHeader.style.fontWeight = "900";
         nameHeader.innerHTML = this.name;
         typeHeader.innerHTML = "Type: Mallard";
-        duckImage.setAttribute("src", "images/mallardDuck.jpg");
         setDiv.appendChild(duckImage);
         setDiv.appendChild(nameHeader);
         setDiv.appendChild(typeHeader);
