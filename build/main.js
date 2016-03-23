@@ -158,6 +158,34 @@ var Mallard = (function (_super) {
 /// <reference path="../../libs/HelperLibrary.ts" />
 /*
  * =====================================================================
+ * REDHEAD CLASS: inherits from the core "Duck" class
+ * =====================================================================
+ */
+var Redhead = (function (_super) {
+    __extends(Redhead, _super);
+    function Redhead() {
+        _super.apply(this, arguments);
+    }
+    Redhead.prototype.display = function () {
+        var targetElement = document.getElementById("row-container"), documentFragment = document.createDocumentFragment(), setDiv = document.createElement("div"), duckImage = document.createElement("img"), nameHeader = document.createElement("p"), typeHeader = document.createElement("p"), newName = HelperLibrary.setDuckElementId(this.name);
+        setDiv.setAttribute("id", newName);
+        setDiv.setAttribute("class", "duck-container col-md-4");
+        duckImage.setAttribute("src", "images/redheadDuck.jpg");
+        nameHeader.style.fontWeight = "900";
+        nameHeader.innerHTML = this.name;
+        typeHeader.innerHTML = "Type: Redhead";
+        setDiv.appendChild(duckImage);
+        setDiv.appendChild(nameHeader);
+        setDiv.appendChild(typeHeader);
+        documentFragment.appendChild(setDiv);
+        targetElement.appendChild(documentFragment);
+    };
+    return Redhead;
+}(Duck));
+/// <reference path="../Duck.ts" />
+/// <reference path="../../libs/HelperLibrary.ts" />
+/*
+ * =====================================================================
  * RUBBER DUCK CLASS: inherits from the core "Duck" class
  * =====================================================================
  */
@@ -184,6 +212,7 @@ var RubberDuck = (function (_super) {
 }(Duck));
 /// <reference path="classes/Duck.ts" />
 /// <reference path="classes/subclasses/Mallard.ts" />
+/// <reference path="classes/subclasses/Redhead.ts" />
 /// <reference path="classes/subclasses/RubberDuck.ts" />
 /*
  * =====================================================================
@@ -194,8 +223,12 @@ var RubberDuck = (function (_super) {
  */
 // Class instances are automatically created on page-load with an IIFE
 (function () {
+    // Create instances of "Redhead"
+    var bobby = new Redhead(new Fly.NoFly(), new Quack.MuteQuack(), "Bobby");
+    // Run the "display()" method for the Redhead
+    bobby.display();
     // Create instances of "Mallard"
-    var joe = new Mallard(new Fly.NoFly(), new Quack.MuteQuack(), "Howard");
+    var joe = new Mallard(new Fly.NoFly(), new Quack.MuteQuack(), "Howard The Duck");
     // Run the "display()" method for each instance
     joe.display();
     // Create instances of "RubberDuck"
