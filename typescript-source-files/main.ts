@@ -2,6 +2,7 @@
 /// <reference path="classes/subclasses/Mallard.ts" />
 /// <reference path="classes/subclasses/Redhead.ts" />
 /// <reference path="classes/subclasses/RubberDuck.ts" />
+/// <reference path="classes/subclasses/Decoy.ts" />
 
 /*
  * =====================================================================
@@ -37,4 +38,10 @@
 	john.display();
 
 
+
+	// Create instances of "DecoyDuck"
+	let james: Duck = new Decoy( new Fly.NoFly(), new Quack.MuteQuack(), "James" );
+
+	// Run the "display()" method for each instance
+	james.display();
 })();

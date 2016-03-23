@@ -210,10 +210,39 @@ var RubberDuck = (function (_super) {
     };
     return RubberDuck;
 }(Duck));
+/// <reference path="../Duck.ts" />
+/// <reference path="../../libs/HelperLibrary.ts" />
+/*
+ * =====================================================================
+ * DECOY CLASS: inherits from the core "Duck" class
+ * =====================================================================
+ */
+var Decoy = (function (_super) {
+    __extends(Decoy, _super);
+    function Decoy() {
+        _super.apply(this, arguments);
+    }
+    Decoy.prototype.display = function () {
+        var targetElement = document.getElementById("row-container"), documentFragment = document.createDocumentFragment(), setDiv = document.createElement("div"), duckImage = document.createElement("img"), nameHeader = document.createElement("p"), typeHeader = document.createElement("p"), newName = HelperLibrary.setDuckElementId(this.name);
+        setDiv.setAttribute("id", newName);
+        setDiv.setAttribute("class", "duck-container col-md-4");
+        duckImage.setAttribute("src", "images/decoyDuck.jpg");
+        nameHeader.style.fontWeight = "900";
+        nameHeader.innerHTML = this.name;
+        typeHeader.innerHTML = "Type: Decoy Duck";
+        setDiv.appendChild(duckImage);
+        setDiv.appendChild(nameHeader);
+        setDiv.appendChild(typeHeader);
+        documentFragment.appendChild(setDiv);
+        targetElement.appendChild(documentFragment);
+    };
+    return Decoy;
+}(Duck));
 /// <reference path="classes/Duck.ts" />
 /// <reference path="classes/subclasses/Mallard.ts" />
 /// <reference path="classes/subclasses/Redhead.ts" />
 /// <reference path="classes/subclasses/RubberDuck.ts" />
+/// <reference path="classes/subclasses/Decoy.ts" />
 /*
  * =====================================================================
  * main.ts
@@ -235,4 +264,8 @@ var RubberDuck = (function (_super) {
     var john = new RubberDuck(new Fly.NoFly(), new Quack.MuteQuack(), "John");
     // Run the "display()" method for each instance
     john.display();
+    // Create instances of "DecoyDuck"
+    var james = new Decoy(new Fly.NoFly(), new Quack.MuteQuack(), "James");
+    // Run the "display()" method for each instance
+    james.display();
 })();
