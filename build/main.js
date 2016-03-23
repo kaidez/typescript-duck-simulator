@@ -128,7 +128,6 @@ var HelperLibrary;
 })(HelperLibrary || (HelperLibrary = {}));
 /// <reference path="Duck.ts" />
 /// <reference path="HelperLibrary.ts" />
-/// <reference path="../typings/jquery/jquery.d.ts" />
 /*
  * =====================================================================
  * MALLARD CLASS: inherits from the core "Duck" class
@@ -140,11 +139,13 @@ var Mallard = (function (_super) {
         _super.apply(this, arguments);
     }
     Mallard.prototype.display = function () {
-        var targetElement = document.getElementById("content"), documentFragment = document.createDocumentFragment(), setDiv = document.createElement("div"), nameHeader = document.createElement("p"), typeHeader = document.createElement("p"), newName = HelperLibrary.setDuckElementId(this.name);
+        var targetElement = document.getElementById("row-container"), documentFragment = document.createDocumentFragment(), setDiv = document.createElement("div"), duckImage = document.createElement("img"), nameHeader = document.createElement("p"), typeHeader = document.createElement("p"), newName = HelperLibrary.setDuckElementId(this.name);
         setDiv.setAttribute("id", newName);
         setDiv.setAttribute("class", "duck-container");
         nameHeader.innerHTML = this.name;
         typeHeader.innerHTML = "Type: Mallard";
+        duckImage.setAttribute("src", "images/mallardDuck.jpg");
+        setDiv.appendChild(duckImage);
         setDiv.appendChild(nameHeader);
         setDiv.appendChild(typeHeader);
         documentFragment.appendChild(setDiv);
