@@ -21,6 +21,7 @@ All still in progress...keep watching!!!!
 * <a href="http://stackoverflow.com/questions/26540165/typescript-and-libraries-such-as-jquery-with-d-ts-files">Stack Overflow post explaining how jQuery works in TypeScript</a> (not like you think)
 
 * MUST READ: <a href="http://monster.partyhat.co/article/a-typescript-workflow-with-npm-and-browserify/">A TypeScript workflow with npm and Browserify</a>. Can I treat jQuery as a CommonJS module in TypeScript
+
 ## Some tools...
 
 * <a href="https://code.visualstudio.com/">Visual Studio Code</a>. You probably won't abandon your current IDE for this, but it's a GREAT tool for developing TypeScript...and learning it.
