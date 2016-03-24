@@ -1,5 +1,6 @@
 /// <reference path="../interfaces/Fly.ts" />
 /// <reference path="../interfaces/Quack.ts" />
+/// <reference path="../libs/HelperLibrary.ts" />
 
 /*
  * =====================================================================
@@ -42,6 +43,13 @@ abstract class Duck {
    */
   public performQuack(): void {
     this.quackbehavior.quack();
+  }
+
+  /*
+   * Call the swim() method that all ducks have
+   */
+  public swim(): void {
+    console.log( this.name );
   }
 
   /*

@@ -41,6 +41,7 @@
 
   // Run the "display()" method for each instance
   joe.display();
+  joe.swim();
 
 
 
