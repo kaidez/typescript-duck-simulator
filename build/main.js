@@ -74,8 +74,30 @@ var Quack;
     }());
     Quack_1.MuteQuack = MuteQuack;
 })(Quack || (Quack = {}));
+/*
+ * =====================================================================
+ * MODULE: HelperLibrary.ts
+ *
+ * A few generic methods that help do stuff in other parts of the code.
+ * Classes and Interface signatures should NOT go here!!!!!!!!
+ * =====================================================================
+ */
+var HelperLibrary;
+(function (HelperLibrary) {
+    /*
+     * setDuckElementId(): a method meant to take the "name" parameter
+     * passed to a duck instance and then make lowercase first, then
+     * remove any whitespace. "name" is represented by the method's
+     * "element" parameter
+     */
+    function setDuckElementId(element) {
+        return element.toLowerCase().replace(/\s+/g, '');
+    }
+    HelperLibrary.setDuckElementId = setDuckElementId;
+})(HelperLibrary || (HelperLibrary = {}));
 /// <reference path="../interfaces/Fly.ts" />
 /// <reference path="../interfaces/Quack.ts" />
+/// <reference path="../libs/HelperLibrary.ts" />
 /*
  * =====================================================================
  * DUCK CLASS: core abstract class for other ducks inherit from
@@ -103,29 +125,14 @@ var Duck = (function () {
     Duck.prototype.performQuack = function () {
         this.quackbehavior.quack();
     };
+    /*
+     * Call the swim() method that all ducks have
+     */
+    Duck.prototype.swim = function () {
+        console.log(this.name);
+    };
     return Duck;
 }());
-/*
- * =====================================================================
- * MODULE: HelperLibrary.ts
- *
- * A few generic methods that help do stuff in other parts of the code.
- * Classes and Interface signatures should NOT go here!!!!!!!!
- * =====================================================================
- */
-var HelperLibrary;
-(function (HelperLibrary) {
-    /*
-     * setDuckElementId(): a method meant to take the "name" parameter
-     * passed to a duck instance and then make lowercase first, then
-     * remove any whitespace. "name" is represented by the method's
-     * "element" parameter
-     */
-    function setDuckElementId(element) {
-        return element.toLowerCase().replace(/\s+/g, '');
-    }
-    HelperLibrary.setDuckElementId = setDuckElementId;
-})(HelperLibrary || (HelperLibrary = {}));
 /// <reference path="../Duck.ts" />
 /// <reference path="../../libs/HelperLibrary.ts" />
 /*
@@ -139,16 +146,18 @@ var Mallard = (function (_super) {
         _super.apply(this, arguments);
     }
     Mallard.prototype.display = function () {
-        var targetElement = document.getElementById("row-container"), documentFragment = document.createDocumentFragment(), setDiv = document.createElement("div"), duckImage = document.createElement("img"), nameHeader = document.createElement("p"), typeHeader = document.createElement("p"), newName = HelperLibrary.setDuckElementId(this.name);
+        var targetElement = document.getElementById("row-container"), documentFragment = document.createDocumentFragment(), setDiv = document.createElement("div"), duckImage = document.createElement("img"), nameHeader = document.createElement("p"), newName = HelperLibrary.setDuckElementId(this.name), typeHeader = document.createElement("p"), swimElement = document.createElement("p");
         setDiv.setAttribute("id", newName);
         setDiv.setAttribute("class", "duck-container col-md-4");
         duckImage.setAttribute("src", "images/mallardDuck.jpg");
+        swimElement.setAttribute("class", "swim-info");
         nameHeader.style.fontWeight = "900";
         nameHeader.innerHTML = this.name;
         typeHeader.innerHTML = "Type: Mallard";
         setDiv.appendChild(duckImage);
         setDiv.appendChild(nameHeader);
         setDiv.appendChild(typeHeader);
+        setDiv.appendChild(swimElement);
         documentFragment.appendChild(setDiv);
         targetElement.appendChild(documentFragment);
     };
@@ -268,6 +277,7 @@ var Decoy = (function (_super) {
     var joe = new Mallard(new Fly.NoFly(), new Quack.MuteQuack(), "Howard The Duck");
     // Run the "display()" method for each instance
     joe.display();
+    joe.swim();
     // Create instance of a "RubberDuck"
     var john = new Rubber(new Fly.NoFly(), new Quack.MuteQuack(), "John");
     // Run the "display()" method for each instance
