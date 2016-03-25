@@ -98,6 +98,7 @@ var HelperLibrary;
 /// <reference path="../interfaces/Fly.ts" />
 /// <reference path="../interfaces/Quack.ts" />
 /// <reference path="../libs/HelperLibrary.ts" />
+/// <reference path="../../typings/browser/ambient/jquery/index.d.ts" />
 /*
  * =====================================================================
  * DUCK CLASS: core abstract class for other ducks inherit from
