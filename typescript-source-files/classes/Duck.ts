@@ -50,7 +50,14 @@ abstract class Duck {
    * Call the swim() method that all ducks have
    */
   public swim(): void {
-    console.log( this.name );
+    var createSwimElement = document.createElement( "p" );
+
+   var newName = HelperLibrary.setDuckElementId(this.name);
+   createSwimElement.setAttribute("id", newName + "-swim-info" );
+   var target = document.getElementById( newName );
+   createSwimElement.innerHTML = "I'm swimming!!!"
+   target.appendChild(createSwimElement);
+
   }
 
   /*

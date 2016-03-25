@@ -130,7 +130,12 @@ var Duck = (function () {
      * Call the swim() method that all ducks have
      */
     Duck.prototype.swim = function () {
-        console.log(this.name);
+        var createSwimElement = document.createElement("p");
+        var newName = HelperLibrary.setDuckElementId(this.name);
+        createSwimElement.setAttribute("id", newName + "-swim-info");
+        var target = document.getElementById(newName);
+        createSwimElement.innerHTML = "I'm swimming!!!";
+        target.appendChild(createSwimElement);
     };
     return Duck;
 }());
