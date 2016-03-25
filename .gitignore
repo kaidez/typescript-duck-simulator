@@ -5,6 +5,7 @@ Thumbs.db
 .zip
 .pot
 .vscode/
+typings/
 .tsd-debug.log
 src/Duck.js
 src/Fly.js
