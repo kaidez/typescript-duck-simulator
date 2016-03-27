@@ -98,7 +98,6 @@ var HelperLibrary;
 /// <reference path="../interfaces/Fly.ts" />
 /// <reference path="../interfaces/Quack.ts" />
 /// <reference path="../libs/HelperLibrary.ts" />
-/// <reference path="../../typings/browser/ambient/jquery/index.d.ts" />
 /*
  * =====================================================================
  * DUCK CLASS: core abstract class for other ducks inherit from
@@ -131,24 +130,6 @@ var Duck = (function () {
      */
     Duck.prototype.swim = function () {
         console.log("I can either swim or float!!!");
-        /*
-            let
-        
-              // Create a <p> tag that will hold the swimming info
-              createSwimElement = document.createElement( "p" ),
-        
-              // Grab the "name" parameter passed to the current "Duck" instance (t)  a <p> tag that will hold the swimming info
-              target = document.getElementById( newName );
-        
-        
-                newName = HelperLibrary.setDuckElementId(this.name);
-        
-        
-           createSwimElement.setAttribute("id", newName + "-swim-info" );
-        
-           createSwimElement.innerHTML = "I can either swim or float!!!"
-           target.appendChild(createSwimElement);
-        */
     };
     return Duck;
 }());
