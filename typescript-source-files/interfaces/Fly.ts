@@ -23,7 +23,7 @@ module Fly {
    */
   export class FlyWithWings implements FlyBehavior {
     public fly(): void {
-      return console.log("I'm flying!!");
+      return console.log( "I'm flying!!" );
     }
   }
 
@@ -33,7 +33,7 @@ module Fly {
    */
   export class NoFly implements FlyBehavior {
     public fly(): void {
-      return console.log("I can't fly!!");
+      return console.log( "I can't fly!!" );
     }
   }
 }

@@ -12,7 +12,7 @@ module Quack {
 	 * QUACK BEHAVIOR INTERFACE
 	 * Encapsulate what varies...like the quack() method that's different
 	 * across all the ducks
-	 */ 
+	 */
 	export interface QuackBehavior {
 		quack(): void;
 	}
@@ -23,7 +23,7 @@ module Quack {
 	 */
 	export class Quack implements QuackBehavior {
 		public quack(): void {
-			return console.log("I'm quacking!!");
+			return console.log( "I'm quacking!!" );
 		}
 	}
 
@@ -43,7 +43,7 @@ module Quack {
 	 */
 	export class MuteQuack implements QuackBehavior {
 		public quack(): void {
-			return console.log("I don't quack!!");
+			return console.log( "I don't quack!!" );
 		}
 	}
 }
