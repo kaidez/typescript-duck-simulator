@@ -1,0 +1,220 @@
+<p class="clearfix">
+<a href="https://github.com/kaidez/typescript-duck-simulator" class="demo-link">grab the code on github</a>
+</p>
+<a href="http://www.typescriptlang.org/">TypeScript</a> is a superset of JavaScript created by Microsoft. It gives JavaScript a set of tools to build and better-organize large scale web applications, tools that already exist in languages like Java and C#.
+
+TypeScript and its tools make it easy to apply classic object-oriented design patterns to JavaScript so I looked at one of those design patterns, the strategy pattern, and did just that. The classic <em>Head First Design Patterns</em> book provided me with a project where I could test this.
+
+
+<h2>Table of Contents</h2>
+
+<ol>
+<li><a href="#assumptions-notes">Assumptions &amp; Notes</a></li>
+<li><a href="#what-is-typescript">What Is TypeScript?</a></li>
+<li><a href="#why-use-typescript">Why Should You Use TypeScript?</a></li>
+<li><a href="#class-prototype">Of Classes &amp; Prototypes</a></li>
+<li><a href="#design-patterns">What Are "Design Patterns"?</a></li>
+<li><a href="#duck-simulator">The Duck Simulator Problem</a></li>
+<li><a href="#strategy-pattern-duck-simulator">Applying The Strategy Pattern To The Duck Simulator</a></li>
+<li><a href="#other-resources">Other Resources</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ol>
+
+
+<a name="assumptions-notes"></a>
+<h2>Assumptions &amp; Notes</h2>
+Some assumptions...
+<ul>
+<li class="post-list-item">I'm assuming that you understand basic JavaScript: you should understand what variables, objects, functions and arrays look like. I'll expand on JS concepts like prototypes and some ES6 things, but you should already understand those basics.</li>
+<li class="post-list-item">I'm assuming that you understand how to install <a href="https://nodejs.org/">Node</a> and run its related commands from the terminal.</li>
+</ul>
+
+Some notes...
+<ul>
+<li class="post-list-item">I have to point to <a href="https://github.com/torokmark/design_patterns_in_typescript">M&aacute;rk T&ouml;r&ouml;k's excellent TypeScript design patterns repo</a> as an excellent resource for helping me do all this. Honestly? If all you want to know is how to apply TypeScript to traditional software design patterns, you may just want to go to that repo.</li>
+<li class="post-list-item">I'm new to TypeScript and, past the basics, only researched the parts needed to complete this project. If you want a more comprehensive learning resource, I suggest the <a href="http://www.typescriptlang.org/docs/tutorial.html">the Handbook in the official documentation</a> or <a href="#other-resources">the list of learning resources at the bottom</a>.</li>
+<li class="post-list-item">There won't be any discussion of the CSS used here.  I used Bootstrap and a few basic styles to make the final product presentable...that's it. You can see the few basic styles <a href="https://github.com/kaidez/typescript-duck-simulator/blob/master/build/main.css">here</a>.</li>
+</ul>
+
+<a name="what-is-typescript"></a>
+<h2>What Is TypeScript?</h2>
+As mentioned, TypeScript is a language that brings things commonly seen in languages like Java and C# into JavaScript. These things include strong-typing, interface-powered classes, access modifiers, generics and more direct access to a function's <code>constructor</code> property.
+
+<em>(Note: for the rest of this post, I'll be referring to TypeScript as "TS" quite often.)</em>
+
+Using these things is optional, keeping JavaScript's flexible nature intact. And you can add ES6 to your TypeScript code and compile it down to ES5 with tools like <a href="http://gruntjs.com/">Grunt</a> and <a href="http://gulpjs.com/">Gulp</a>, or at the command-line level...like I'll be doing in this post.
+
+<a name="why-use-typescript"></a>
+<h2>Why Should You Use TypeScript?</h2>
+The main reason for using TypeScript is that it brings strong level of organization to your code. Classes, interfaces and the like reduce the amount of "spaghetti code" in your JavaScript, making it more manageable as well as more readable to other developers.
+
+Another reason to use TS is if you're an Angular developer that's concerned about changes that came to AngularJS2. That language was written in TypeScript so knowing it will make learning AngularJS2 easier.
+
+<em>(Note: <a href="https://twitter.com/planetoftheweb">Ray Villalobos </a>from lynda.com wrote <a href="http://www.raybo.org/blog/2016/02/18/AngularJS-2_what_to_look_for_when_migrating_to_the_new_version.html">a great article on the TS/AngularJS2 connection</a>.)</em>
+
+And a BIG reason for using TS is to help you learn other languages like Java and C#. TypeScript was created by Anders Hejlsberg, who also created C# for Microsoft and carried some ideas from that language over to TS.
+
+And since C# is similar to Java, syntax-wise, you'll gain some comfort for the latter language as well. Overall, <em>Typescript is a GREAT tool for learning object-oriented programming.</em>
+
+<a name="class-prototype"></a>
+<h2>Of Classes &amp; Prototypes</h2>
+Since we're using the strategy pattern, we need to use classes. And if you want to apply classes to JavaScript, we need to discuss prototypes.
+
+Java, C#, and JavaScript are <em>object-oriented languages</em>. Each language lets you create <em>objects</em> that contain some sort of data needed to make your application or website work.
+
+To create objects in Java and C#, you have to create a <em>class</em> first. The class creates the object, which is often referred to as an <em>instance of the class</em>.
+
+These new object instances are (almost always) created from classes using a <em>constructor function</em>. So you would create the class first...
+<pre><code class="language-javascript">
+// This is how Java does it
+class Duck {
+  public void fly() {
+    System.out.println("I'm flying!!!");
+  }		
+}
+</code></pre>
+
+...and then build the object with a constructor function and its <code>new</code> keyword like this...
+<pre><code class="language-javascript">
+Duck donald = new Duck();
+</code></pre>
+
+...then make the new instance run the <code>Duck</code> class' internal <code>fly()</code> function, or <em>method</em>.
+<pre><code class="language-javascript">
+// Print "I'm flying" to whatever console you're using
+donald.fly();
+</code></pre>
+
+In Java and C#, you can use the <code>extends</code> keyword for those times when you have to perform <em>class inheritance</em>...
+<pre><code class="language-javascript">
+// Have the new "Mallard" class inherit from the "Duck" class
+class Mallard extends Duck {
+  // Some code goes here...
+}
+
+// Create a new instance of Mallard with a constructor function
+Duck joe = new Mallard();
+</code></pre>
+
+...and the <code>Mallard</code> instance called "joe" will have access to the <code>fly()</code> method in the <code>Duck</code> class.
+<pre><code class="language-javascript">
+// Print "I'm flying" to whatever console you're using
+joe.fly();
+</code></pre>
+
+JavaScript doesn't have an internal class structure and is, instead, based on <em>prototypes</em>. And while objects inherit from classes in classical languages, <em>objects are created/inherit from other objects in prototypal languages</em>.
+
+There are a few ways to do this but this way is considered the best practice:
+<pre><code class="language-javascript">
+
+// Create a "class" in JavaScript...yes, a function is an object in JS
+function Duck() {};
+
+// Attach a fly method to the Duck prototype
+Duck.prototype.fly = function() {
+  console.log("I'm Flying");
+}
+
+// Create a new instance of the Duck "class" with a constructor function 
+let donald = new Duck();
+
+// Make the new instance run the "fly()"method
+donald.fly();
+</code></pre>
+
+There are many, many MANY ways to perform "class inheritance" with JavaScript prototypes.  One of the ways is as follows...
+
+<pre><code class="language-javascript">
+// Create a new JavaScript "class"...
+function Mallard() {}
+
+// ...and set its prototype equal to the "class" it's inheriting from.
+Mallard.prototype = Duck.prototype;
+
+/*
+ * That Mallard "class" has an internal "constructor" property that gets
+ * destroyed after you set its prototype equal to the prototype of the
+ * Duck "class". It's a best practice to reset it.
+ */
+Mallard.prototype.constructor = Mallard;
+
+/*
+ * Then create a new instance of the Mallard "class" and make it run the
+ * "fly()" method it inherited.
+ */
+let joe = new Mallard();
+
+joe.fly();
+</code></pre>
+
+<em>(Note: I always suggest <a href="http://www.amazon.com/gp/product/1849693129/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1849693129&linkCode=as2&tag=kaidez-20&linkId=VBSHTF6KREN7T7XH">Object-Oriented JavaScript</a><img src="http://ir-na.amazon-adsystem.com/e/ir?t=kaidez-20&l=as2&o=1&a=1849693129" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /> by <a href="https://twitter.com/stoyanstefanov">Stoyan Stefanov</a> to JavaScript newbies, partially because of its two excellent chapters on JavaScript prototypes.)</em>
+
+Take note that when referring to JavaScript "classes," that word was always wrapped in quotes. This is because <em>JavaScript doesn't have classes</em>.
+
+<a href="http://coffeescript.org/">CoffeeScript</a> is a language that compiles down to JavaScript and uses the <code>class</code> keyword. And both TypeScript and ES6 do the same thing.
+
+But none of these languages bring classes to JS. Whenever they see <code>class</code> being used, all they do is convert the code to prototypes behind the scenes.
+
+Within TS, this is good...at least I think so. Its <code>class</code> keyword lets developers to bring more mature software development practices to JavaScript.
+
+And in software development, very few things are more mature than <em>design patterns</em>.
+
+<a name="design-patterns"></a>
+<h2>What Are "Design Patterns"?</h2>
+Design patterns are coding patterns that implement a certain solution or solve a certain problem in software development. Twenty-three such  patterns were described in 1994's <a  href="http://www.amazon.com/gp/product/0201633612/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0201633612&linkCode=as2&tag=kaidez-20&linkId=VW5WXIA6XMVEH63W"><em>Design Patterns</em></a><img src="http://ir-na.amazon-adsystem.com/e/ir?t=kaidez-20&l=as2&o=1&a=0201633612" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /> book, sometimes referred to as the "Gang of Four" book that references its four authors.
+ 
+Generally speaking, <em>Design Patterns</em> walks through each pattern and said three things
+<ol>
+<li>this is the software problem.</li>
+<li>this is the pattern you should use to solve that problem.</li>
+<li>these are the pros and cons of using that pattern.</li>
+</ol>
+
+<em><a href="http://www.amazon.com/gp/product/0596007124/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0596007124&linkCode=as2&tag=kaidez-20&linkId=35S7Q75S353IMOJ7">Head First Design Patterns</a></em> was another book influenced by <em>Design Patterns</em> that came out ten years later. It didn't cover all the patterns in the Gang of Four book, but was easier to read than the latter.
+
+<em>(Note: <a href="http://twitter.com/addyosmani">Addy Osmani</a> has written <a href="https://addyosmani.com/resources/essentialjsdesignpatterns/book/">a free e-book of pure JavaScript implementations of design patterns</a>.)</em>
+
+<em>Head First</em> starts off with a discussion of the strategy pattern and uses it to solve a problem with some duck simulator software.
+
+<a name="duck-simulator"></a>
+<h2>The Duck Simulator Problem</h2>
+Here's a simplistic description of the problem:
+
+There's a developer that maintains a game called "SimUDuck," which simulates different types of ducks in a pond. The ducks already have the ability to swim as well as display what type of ducks they are.
+
+At the software level, all those behaviors are stored in a <code>Duck</code> class as methods respectively named <code>swim()</code> and <code>display()</code>. Different types of duck classes inherit directly from this class and as a result, also inherits its internal methods.
+
+The developer is told to programmatically make ducks fly and adds an internal <code>fly()</code> method to <code>Duck</code>. S/he also takes the initiative and makes them quack with a <code>quack()</code> method.
+
+But when both rubber and decoy ducks are added to the game later on, they fly...ducks like this don't fly!!! And it turns out that each duck quacks, but differently.
+
+So the developer has a problem: the duck-related classes are inheriting all of <code>Duck</code>'s internal methods, but there are some methods that each uses differently. And there are some that the class instances shouldn't use at all.
+
+To sum up the situation:
+<ul>
+<li>all the inheriting duck classes have a <code>quack()</code>, <code>fly()</code>, <code>swim()</code> and <code>display()</code> method.</li>
+<li>all of ducks quack, but not in the same way.</li>
+<li>some ducks cannot fly.</li>
+<li>all ducks can swim in one way or another and use the exact same method to let everyone know this.</li>
+<li>all ducks can display what kind of ducks they are and use the same method to do so, but the information that the method displays is different across the different ducks.</li>
+</ul>
+
+The big problem is with both the <code>quack()</code> and <code>fly()</code> methods inside <code>Duck</code> because they bring the most differences into the code base. For every class that inherits from <code>Duck</code>, the developer could <em>override</em> the latter's <code>quack()</code> and <code>fly()</code> methods and give them the specific behavior they need.
+
+But the end result of that will be duplicating code...a strict and sloppy violation of the <a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself">DRY principle</a>. So the developer needs to find a way to neatly allow those inheriting ducks to use <code>quack()</code> and <code>fly()</code> inside <code>Duck</code> while taking all the differences into consideration.
+
+Enter the <em>strategy pattern</em>.
+
+<a name="strategy-pattern-duck-simulator"></a>
+<h2>Applying The Strategy Pattern To The Duck Simulator</h2>
+Using the strategy pattern means we write code that lets a method's behavior be selected at runtime. In other words, one class can inherit from a core class like <code>Duck</code>, along with its varying methods, but the inheriting class gets to pick <em>how</em> to run them instead of letting the core class pick.
+
+<a name="other-resources"></a>
+<h2>Other Resources</h2>
+
+
+<a name="conclusion"></a>
+<h2>Conclusion</h2>
+
+No setters
+no duck simulator
