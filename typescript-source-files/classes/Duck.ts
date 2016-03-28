@@ -49,7 +49,7 @@ abstract class Duck {
    * Set the swim() method that all ducks have
    */
   public swim(): void {
-    console.log("I can either swim or float!!!");
+    return console.log("I can either swim or float!!!");
   }
 
   /*
