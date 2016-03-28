@@ -8,7 +8,7 @@ All still in progress...keep watching!!!!
 
 ## Some links that helped me...
 
-* <a href="http://www.typescriptlang.org/Handbook">The Official TypeScript Handbook</a> (probably your first stop)
+* <a href="http://www.typescriptlang.org/docs/">The Handbook in the Official Documentation</a> (~probably~ your first stop)
 
 * <a href="https://channel9.msdn.com/posts/Anders-Hejlsberg-Introducing-TypeScript">Anders Hejlsberg: Introducing TypeScript</a> (screencast TypeScript walk-thru from the guy that created the language...MAYBE your second stop)
 
