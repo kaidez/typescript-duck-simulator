@@ -23,12 +23,6 @@ abstract class Duck {
   private flybehavior: Fly.FlyBehavior;
   private quackbehavior: Quack.QuackBehavior;
 
-  // Define the Duck's constructor function
-  constructor( flybehavior: Fly.FlyBehavior, quackbehavior: Quack.QuackBehavior, public name: string = "Anonymous Duck" ) {
-    this.flybehavior = flybehavior;
-    this.quackbehavior = quackbehavior;
-  }
-
   /*
    * Call "performFly()" when you want a class instance to implement
    * one of the two "fly" behaviors created earlier
@@ -60,4 +54,9 @@ abstract class Duck {
    */
   abstract display(): void;
 
+  // Define the Duck's constructor function
+  constructor( flybehavior: Fly.FlyBehavior, quackbehavior: Quack.QuackBehavior, public name: string = "Anonymous Duck" ) {
+    this.flybehavior = flybehavior;
+    this.quackbehavior = quackbehavior;
+  }
 }
