@@ -1,6 +1,6 @@
 /// <reference path="../interfaces/Fly.ts" />
 /// <reference path="../interfaces/Quack.ts" />
-/// <reference path="../libs/HelperLibrary.ts" />
+
 
 /*
  * =====================================================================

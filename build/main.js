@@ -74,30 +74,8 @@ var Quack;
     }());
     Quack_1.MuteQuack = MuteQuack;
 })(Quack || (Quack = {}));
-/*
- * =====================================================================
- * MODULE: HelperLibrary.ts
- *
- * A few generic methods that help do stuff in other parts of the code.
- * Classes and Interface signatures should NOT go here!!!!!!!!
- * =====================================================================
- */
-var HelperLibrary;
-(function (HelperLibrary) {
-    /*
-     * setDuckElementId(): a method meant to take the "name" parameter
-     * passed to a duck instance and then make lowercase first, then
-     * remove any whitespace. "name" is represented by the method's
-     * "element" parameter
-     */
-    function setDuckElementId(element) {
-        return element.toLowerCase().replace(/\s+/g, '');
-    }
-    HelperLibrary.setDuckElementId = setDuckElementId;
-})(HelperLibrary || (HelperLibrary = {}));
 /// <reference path="../interfaces/Fly.ts" />
 /// <reference path="../interfaces/Quack.ts" />
-/// <reference path="../libs/HelperLibrary.ts" />
 /*
  * =====================================================================
  * DUCK CLASS: core abstract class for other ducks inherit from
