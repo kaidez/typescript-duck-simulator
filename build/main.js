@@ -129,12 +129,11 @@ var Duck = (function () {
      * Set the swim() method that all ducks have
      */
     Duck.prototype.swim = function () {
-        console.log("I can either swim or float!!!");
+        return console.log("I can either swim or float!!!");
     };
     return Duck;
 }());
 /// <reference path="../Duck.ts" />
-/// <reference path="../../libs/HelperLibrary.ts" />
 /*
  * =====================================================================
  * MALLARD DUCK CLASS: inherits from the core "Duck" class
@@ -146,25 +145,11 @@ var Mallard = (function (_super) {
         _super.apply(this, arguments);
     }
     Mallard.prototype.display = function () {
-        var targetElement = document.getElementById("row-container"), documentFragment = document.createDocumentFragment(), setDiv = document.createElement("div"), duckImage = document.createElement("img"), nameHeader = document.createElement("p"), newName = HelperLibrary.setDuckElementId(this.name), typeHeader = document.createElement("p"), swimElement = document.createElement("p");
-        setDiv.setAttribute("id", newName);
-        setDiv.setAttribute("class", "duck-container col-md-4");
-        duckImage.setAttribute("src", "images/mallardDuck.jpg");
-        swimElement.setAttribute("class", "swim-info");
-        nameHeader.style.fontWeight = "900";
-        nameHeader.innerHTML = this.name;
-        typeHeader.innerHTML = "Type: Mallard";
-        setDiv.appendChild(duckImage);
-        setDiv.appendChild(nameHeader);
-        setDiv.appendChild(typeHeader);
-        setDiv.appendChild(swimElement);
-        documentFragment.appendChild(setDiv);
-        targetElement.appendChild(documentFragment);
+        return console.log("I am a Decoy Duck");
     };
     return Mallard;
 }(Duck));
 /// <reference path="../Duck.ts" />
-/// <reference path="../../libs/HelperLibrary.ts" />
 /*
  * =====================================================================
  * REDHEAD DUCK CLASS: inherits from the core "Duck" class
@@ -176,23 +161,11 @@ var Redhead = (function (_super) {
         _super.apply(this, arguments);
     }
     Redhead.prototype.display = function () {
-        var targetElement = document.getElementById("row-container"), documentFragment = document.createDocumentFragment(), setDiv = document.createElement("div"), duckImage = document.createElement("img"), nameHeader = document.createElement("p"), typeHeader = document.createElement("p"), newName = HelperLibrary.setDuckElementId(this.name);
-        setDiv.setAttribute("id", newName);
-        setDiv.setAttribute("class", "duck-container col-md-4");
-        duckImage.setAttribute("src", "images/redheadDuck.jpg");
-        nameHeader.style.fontWeight = "900";
-        nameHeader.innerHTML = this.name;
-        typeHeader.innerHTML = "Type: Redhead";
-        setDiv.appendChild(duckImage);
-        setDiv.appendChild(nameHeader);
-        setDiv.appendChild(typeHeader);
-        documentFragment.appendChild(setDiv);
-        targetElement.appendChild(documentFragment);
+        return console.log("I am a Redhead");
     };
     return Redhead;
 }(Duck));
 /// <reference path="../Duck.ts" />
-/// <reference path="../../libs/HelperLibrary.ts" />
 /*
  * =====================================================================
  * RUBBER DUCK CLASS: inherits from the core "Duck" class
@@ -204,23 +177,11 @@ var Rubber = (function (_super) {
         _super.apply(this, arguments);
     }
     Rubber.prototype.display = function () {
-        var targetElement = document.getElementById("row-container"), documentFragment = document.createDocumentFragment(), setDiv = document.createElement("div"), duckImage = document.createElement("img"), nameHeader = document.createElement("p"), typeHeader = document.createElement("p"), newName = HelperLibrary.setDuckElementId(this.name);
-        setDiv.setAttribute("id", newName);
-        setDiv.setAttribute("class", "duck-container col-md-4");
-        duckImage.setAttribute("src", "images/rubberDuck.jpg");
-        nameHeader.style.fontWeight = "900";
-        nameHeader.innerHTML = this.name;
-        typeHeader.innerHTML = "Type: Rubber";
-        setDiv.appendChild(duckImage);
-        setDiv.appendChild(nameHeader);
-        setDiv.appendChild(typeHeader);
-        documentFragment.appendChild(setDiv);
-        targetElement.appendChild(documentFragment);
+        return console.log("I am a Rubber Duck!!");
     };
     return Rubber;
 }(Duck));
 /// <reference path="../Duck.ts" />
-/// <reference path="../../libs/HelperLibrary.ts" />
 /*
  * =====================================================================
  * DECOY DUCK CLASS: inherits from the core "Duck" class
@@ -232,18 +193,7 @@ var Decoy = (function (_super) {
         _super.apply(this, arguments);
     }
     Decoy.prototype.display = function () {
-        var targetElement = document.getElementById("row-container"), documentFragment = document.createDocumentFragment(), setDiv = document.createElement("div"), duckImage = document.createElement("img"), nameHeader = document.createElement("p"), typeHeader = document.createElement("p"), newName = HelperLibrary.setDuckElementId(this.name);
-        setDiv.setAttribute("id", newName);
-        setDiv.setAttribute("class", "duck-container col-md-4");
-        duckImage.setAttribute("src", "images/decoyDuck.jpg");
-        nameHeader.style.fontWeight = "900";
-        nameHeader.innerHTML = this.name;
-        typeHeader.innerHTML = "Type: Decoy Duck";
-        setDiv.appendChild(duckImage);
-        setDiv.appendChild(nameHeader);
-        setDiv.appendChild(typeHeader);
-        documentFragment.appendChild(setDiv);
-        targetElement.appendChild(documentFragment);
+        return console.log("I am a Decoy Duck!!!");
     };
     return Decoy;
 }(Duck));
