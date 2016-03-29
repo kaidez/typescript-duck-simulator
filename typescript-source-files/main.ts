@@ -16,7 +16,7 @@
 let stacey: Duck = new Redhead( new Fly.NoFly(), new Quack.MuteQuack(), "Stacy" );
 
 // Run the "display()" method for the Redhead
-  stacey.display();
+stacey.display();
 
 
 // Create instance of a "RubberDuck"
