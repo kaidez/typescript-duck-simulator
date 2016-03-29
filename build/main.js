@@ -183,7 +183,7 @@ var Decoy = (function (_super) {
  * =====================================================================
  * main.ts
  *
- * Code that should be executed in the browser should go here.
+ * Code that should run in the browser should go here.
  * =====================================================================
  */
 // Create instance of a "Redhead"
