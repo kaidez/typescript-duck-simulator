@@ -12,46 +12,44 @@
  */
 
 
-// Create instance of a "Redhead"
-let stacey: Duck = new Redhead( new Fly.NoFly(), new Quack.MuteQuack(), "Stacy" );
+// Create an instance of "Decoy"
+let joey: Decoy = new Decoy( new Fly.NoFly(), new Quack.MuteQuack(), "Joey" );
 
-// Run the "display()" method for the Redhead
-stacey.display();
-
-
-// Create instance of a "RubberDuck"
-let jerrySeinfeld: Duck = new Rubber( new Fly.NoFly(), new Quack.MuteQuack(), "Jerry Seinfeld" );
-
-// Run the "display()" method for each instance
-jerrySeinfeld.display();
-
-// Create instance of a "Redhead"
-let bobby: Duck = new Redhead( new Fly.NoFly(), new Quack.MuteQuack(), "Bobby" );
-
-// Run the "display()" method for the Redhead
-bobby.display();
+// Run methods for the "joey"
+joey.display();
+joey.performFly();
+joey.performQuack();
+joey.swim();
+console.log("\n\n");
 
 
 
-// Create instance of a "Mallard"
-let joe: Duck = new Mallard( new Fly.NoFly(), new Quack.MuteQuack(), "Howard The Duck" );
+// Create an instance of a "Decoy"
+let tina: Duck = new Mallard( new Fly.FlyWithWings(), new Quack.Quack(), "Tina" );
 
-// Run the "display()" method for each instance
-joe.display();
-joe.swim();
+// Run methods for the "tina"
+tina.display();
+tina.performFly();
+tina.performQuack();
+tina.swim();
+console.log("\n\n");
+
+// Create an instance of a "Redhead"
+let bob = new Redhead( new Fly.FlyWithWings(), new Quack.MuteQuack(), "Bob" );
+
+// Run methods for the "bob"
+bob.display();
+bob.performFly();
+bob.performQuack();
+bob.swim();
+console.log("\n\n");
 
 
+// Create an instance of a "Rubber"
+let rick: Rubber = new Rubber( new Fly.NoFly(), new Quack.Squeak(), "Rick" );
 
-// Create instance of a "RubberDuck"
-let john: Duck = new Rubber( new Fly.NoFly(), new Quack.MuteQuack(), "John" );
-
-// Run the "display()" method for each instance
-john.display();
-
-
-
-// Create instance of a "DecoyDuck"
-let james: Duck = new Decoy( new Fly.NoFly(), new Quack.MuteQuack(), "James" );
-
-// Run the "display()" method for each instance
-james.display();
+// Run methods for the "rick"
+rick.display();
+rick.performFly();
+rick.performQuack();
+rick.swim();

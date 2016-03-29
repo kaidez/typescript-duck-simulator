@@ -84,7 +84,7 @@ var Quack;
 var Duck = (function () {
     // Define the Duck's constructor function
     function Duck(flybehavior, quackbehavior, name) {
-        if (name === void 0) { name = "Anonymous Duck"; }
+        if (name === void 0) { name = "Anonymous"; }
         this.name = name;
         this.flybehavior = flybehavior;
         this.quackbehavior = quackbehavior;
@@ -123,7 +123,7 @@ var Decoy = (function (_super) {
         _super.apply(this, arguments);
     }
     Decoy.prototype.display = function () {
-        return console.log("I am a Decoy Duck!!!");
+        return console.log("My name is " + this.name + ". I am a Decoy Duck!!!");
     };
     return Decoy;
 }(Duck));
@@ -139,7 +139,7 @@ var Mallard = (function (_super) {
         _super.apply(this, arguments);
     }
     Mallard.prototype.display = function () {
-        return console.log("I am a Mallard Duck!!!");
+        return console.log("My name is " + this.name + ". I am a Mallard Duck!!!");
     };
     return Mallard;
 }(Duck));
@@ -155,7 +155,7 @@ var Redhead = (function (_super) {
         _super.apply(this, arguments);
     }
     Redhead.prototype.display = function () {
-        return console.log("I am a Redhead!!!");
+        return console.log("My name is " + this.name + ". I am a Redhead Duck!!!");
     };
     return Redhead;
 }(Duck));
@@ -171,7 +171,7 @@ var Rubber = (function (_super) {
         _super.apply(this, arguments);
     }
     Rubber.prototype.display = function () {
-        return console.log("I am a Rubber Duck!!!");
+        return console.log("My name is " + this.name + ". I am a Rubber Duck!!!");
     };
     return Rubber;
 }(Duck));
@@ -186,28 +186,34 @@ var Rubber = (function (_super) {
  * Code that should run in the browser should go here.
  * =====================================================================
  */
-// Create instance of a "Redhead"
-var stacey = new Redhead(new Fly.NoFly(), new Quack.MuteQuack(), "Stacy");
-// Run the "display()" method for the Redhead
-stacey.display();
-// Create instance of a "RubberDuck"
-var jerrySeinfeld = new Rubber(new Fly.NoFly(), new Quack.MuteQuack(), "Jerry Seinfeld");
-// Run the "display()" method for each instance
-jerrySeinfeld.display();
-// Create instance of a "Redhead"
-var bobby = new Redhead(new Fly.NoFly(), new Quack.MuteQuack(), "Bobby");
-// Run the "display()" method for the Redhead
-bobby.display();
-// Create instance of a "Mallard"
-var joe = new Mallard(new Fly.NoFly(), new Quack.MuteQuack(), "Howard The Duck");
-// Run the "display()" method for each instance
-joe.display();
-joe.swim();
-// Create instance of a "RubberDuck"
-var john = new Rubber(new Fly.NoFly(), new Quack.MuteQuack(), "John");
-// Run the "display()" method for each instance
-john.display();
-// Create instance of a "DecoyDuck"
-var james = new Decoy(new Fly.NoFly(), new Quack.MuteQuack(), "James");
-// Run the "display()" method for each instance
-james.display();
+// Create an instance of "Decoy"
+var joey = new Decoy(new Fly.NoFly(), new Quack.MuteQuack(), "Joey");
+// Run methods for the "joey"
+joey.display();
+joey.performFly();
+joey.performQuack();
+joey.swim();
+console.log("\n\n");
+// Create an instance of a "Decoy"
+var tina = new Mallard(new Fly.FlyWithWings(), new Quack.Quack(), "Tina");
+// Run methods for the "tina"
+tina.display();
+tina.performFly();
+tina.performQuack();
+tina.swim();
+console.log("\n\n");
+// Create an instance of a "Redhead"
+var bob = new Redhead(new Fly.FlyWithWings(), new Quack.MuteQuack(), "Bob");
+// Run methods for the "bob"
+bob.display();
+bob.performFly();
+bob.performQuack();
+bob.swim();
+console.log("\n\n");
+// Create an instance of a "Rubber"
+var rick = new Rubber(new Fly.NoFly(), new Quack.Squeak(), "Rick");
+// Run methods for the "rick"
+rick.display();
+rick.performFly();
+rick.performQuack();
+rick.swim();
