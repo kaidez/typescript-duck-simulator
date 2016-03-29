@@ -203,12 +203,12 @@ tina.performQuack();
 tina.swim();
 console.log("\n\n");
 // Create an instance of a "Redhead"
-var bob = new Redhead(new Fly.FlyWithWings(), new Quack.MuteQuack(), "Bob");
-// Run methods for the "bob"
-bob.display();
-bob.performFly();
-bob.performQuack();
-bob.swim();
+var noName = new Redhead(new Fly.FlyWithWings(), new Quack.MuteQuack());
+// Run methods for the "noName"
+noName.display();
+noName.performFly();
+noName.performQuack();
+noName.swim();
 console.log("\n\n");
 // Create an instance of a "Rubber"
 var rick = new Rubber(new Fly.NoFly(), new Quack.Squeak(), "Rick");

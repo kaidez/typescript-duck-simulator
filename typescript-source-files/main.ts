@@ -13,7 +13,7 @@
 
 
 // Create an instance of "Decoy"
-let joey: Decoy = new Decoy( new Fly.NoFly(), new Quack.MuteQuack(), "Joey" );
+let joey = new Decoy( new Fly.NoFly(), new Quack.MuteQuack(), "Joey" );
 
 // Run methods for the "joey"
 joey.display();
@@ -23,7 +23,7 @@ joey.swim();
 console.log("\n\n");
 
 // Create an instance of a "Decoy"
-let tina: Duck = new Mallard( new Fly.FlyWithWings(), new Quack.Quack(), "Tina" );
+let tina = new Mallard( new Fly.FlyWithWings(), new Quack.Quack(), "Tina" );
 
 // Run methods for the "tina"
 tina.display();
@@ -33,17 +33,17 @@ tina.swim();
 console.log("\n\n");
 
 // Create an instance of a "Redhead"
-let bob = new Redhead( new Fly.FlyWithWings(), new Quack.MuteQuack(), "Bob" );
+let noName = new Redhead( new Fly.FlyWithWings(), new Quack.MuteQuack() );
 
-// Run methods for the "bob"
-bob.display();
-bob.performFly();
-bob.performQuack();
-bob.swim();
+// Run methods for the "noName"
+noName.display();
+noName.performFly();
+noName.performQuack();
+noName.swim();
 console.log("\n\n");
 
 // Create an instance of a "Rubber"
-let rick: Rubber = new Rubber( new Fly.NoFly(), new Quack.Squeak(), "Rick" );
+let rick = new Rubber( new Fly.NoFly(), new Quack.Squeak(), "Rick" );
 
 // Run methods for the "rick"
 rick.display();
