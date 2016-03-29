@@ -22,8 +22,6 @@ joey.performQuack();
 joey.swim();
 console.log("\n\n");
 
-
-
 // Create an instance of a "Decoy"
 let tina: Duck = new Mallard( new Fly.FlyWithWings(), new Quack.Quack(), "Tina" );
 
@@ -43,7 +41,6 @@ bob.performFly();
 bob.performQuack();
 bob.swim();
 console.log("\n\n");
-
 
 // Create an instance of a "Rubber"
 let rick: Rubber = new Rubber( new Fly.NoFly(), new Quack.Squeak(), "Rick" );
