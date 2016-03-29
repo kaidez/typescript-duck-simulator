@@ -10,7 +10,7 @@ class Mallard extends Duck {
 
   public display(): void {
 
-    return console.log("I am a Decoy Duck");
+    return console.log( "I am a Decoy Duck" );
 
   }
 

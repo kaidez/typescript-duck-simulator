@@ -10,7 +10,7 @@ class Redhead extends Duck {
 
   public display(): void {
 
-    return console.log("I am a Redhead");
+    return console.log( "I am a Redhead" );
 
   }
 
