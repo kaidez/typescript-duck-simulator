@@ -22,7 +22,7 @@ joey.performQuack();
 joey.swim();
 console.log("\n\n");
 
-// Create an instance of a "Decoy"
+// Create an instance of a "Mallard"
 let tina = new Mallard( new Fly.FlyWithWings(), new Quack.Quack(), "Tina" );
 
 // Run methods for the "tina"
