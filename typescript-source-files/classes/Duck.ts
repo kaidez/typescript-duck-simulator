@@ -59,4 +59,5 @@ abstract class Duck {
     this.flybehavior = flybehavior;
     this.quackbehavior = quackbehavior;
   }
+
 }
