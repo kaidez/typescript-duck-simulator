@@ -55,7 +55,7 @@ abstract class Duck {
   abstract display(): void;
 
   // Define the Duck's constructor function
-  constructor( flybehavior: Fly.FlyBehavior, quackbehavior: Quack.QuackBehavior, public name: string = "Anonymous Duck" ) {
+  constructor( flybehavior: Fly.FlyBehavior, quackbehavior: Quack.QuackBehavior, public name: string = "Anonymous" ) {
     this.flybehavior = flybehavior;
     this.quackbehavior = quackbehavior;
   }
