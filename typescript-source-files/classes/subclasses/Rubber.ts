@@ -10,7 +10,7 @@ class Rubber extends Duck {
 
   public display(): void {
 
-    return console.log( "I am a Rubber Duck!!" );
+    return console.log( "I am a Rubber Duck!!!" );
 
   }
 

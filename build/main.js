@@ -123,7 +123,7 @@ var Mallard = (function (_super) {
         _super.apply(this, arguments);
     }
     Mallard.prototype.display = function () {
-        return console.log("I am a Decoy Duck");
+        return console.log("I am a Mallard Duck!!!");
     };
     return Mallard;
 }(Duck));
@@ -139,7 +139,7 @@ var Redhead = (function (_super) {
         _super.apply(this, arguments);
     }
     Redhead.prototype.display = function () {
-        return console.log("I am a Redhead");
+        return console.log("I am a Redhead!!!");
     };
     return Redhead;
 }(Duck));
@@ -155,7 +155,7 @@ var Rubber = (function (_super) {
         _super.apply(this, arguments);
     }
     Rubber.prototype.display = function () {
-        return console.log("I am a Rubber Duck!!");
+        return console.log("I am a Rubber Duck!!!");
     };
     return Rubber;
 }(Duck));
