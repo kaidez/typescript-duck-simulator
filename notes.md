@@ -19,3 +19,5 @@
 * edX MIGHT have a free course <a href="https://www.edx.org/course/introduction-typescript-microsoft-dev201x-1">here</a> after April 18th, 2016.  Watch that space!!!!
 
 * importing libraries like jQuery as CommonJS modules doesn't _appear_ to be doable.  AMD may be the only way to use them. But a possible fix for this might be <a href="https://github.com/Microsoft/TypeScript/issues/5285">here</a>. The one <a href="http://stackoverflow.com/questions/13107208/how-can-i-define-a-jquery-object-in-typescript">here</a> also may help.
+
+* <a href="https://www.stevefenton.co.uk/2013/04/stop-manually-assigning-typescript-constructor-parameters/">An alternative way to set up TypeScript constructor functions.</a>
