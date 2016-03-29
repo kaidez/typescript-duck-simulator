@@ -114,6 +114,22 @@ var Duck = (function () {
 /// <reference path="../Duck.ts" />
 /*
  * =====================================================================
+ * DECOY DUCK CLASS: inherits from the core "Duck" class
+ * =====================================================================
+ */
+var Decoy = (function (_super) {
+    __extends(Decoy, _super);
+    function Decoy() {
+        _super.apply(this, arguments);
+    }
+    Decoy.prototype.display = function () {
+        return console.log("I am a Decoy Duck!!!");
+    };
+    return Decoy;
+}(Duck));
+/// <reference path="../Duck.ts" />
+/*
+ * =====================================================================
  * MALLARD DUCK CLASS: inherits from the core "Duck" class
  * =====================================================================
  */
@@ -159,26 +175,10 @@ var Rubber = (function (_super) {
     };
     return Rubber;
 }(Duck));
-/// <reference path="../Duck.ts" />
-/*
- * =====================================================================
- * DECOY DUCK CLASS: inherits from the core "Duck" class
- * =====================================================================
- */
-var Decoy = (function (_super) {
-    __extends(Decoy, _super);
-    function Decoy() {
-        _super.apply(this, arguments);
-    }
-    Decoy.prototype.display = function () {
-        return console.log("I am a Decoy Duck!!!");
-    };
-    return Decoy;
-}(Duck));
+/// <reference path="classes/subclasses/Decoy.ts" />
 /// <reference path="classes/subclasses/Mallard.ts" />
 /// <reference path="classes/subclasses/Redhead.ts" />
 /// <reference path="classes/subclasses/Rubber.ts" />
-/// <reference path="classes/subclasses/Decoy.ts" />
 /*
  * =====================================================================
  * main.ts

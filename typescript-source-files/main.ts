@@ -1,7 +1,7 @@
+/// <reference path="classes/subclasses/Decoy.ts" />
 /// <reference path="classes/subclasses/Mallard.ts" />
 /// <reference path="classes/subclasses/Redhead.ts" />
 /// <reference path="classes/subclasses/Rubber.ts" />
-/// <reference path="classes/subclasses/Decoy.ts" />
 
 /*
  * =====================================================================
