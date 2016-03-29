@@ -1,4 +1,3 @@
-/// <reference path="classes/Duck.ts" />
 /// <reference path="classes/subclasses/Mallard.ts" />
 /// <reference path="classes/subclasses/Redhead.ts" />
 /// <reference path="classes/subclasses/Rubber.ts" />

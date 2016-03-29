@@ -175,7 +175,6 @@ var Decoy = (function (_super) {
     };
     return Decoy;
 }(Duck));
-/// <reference path="classes/Duck.ts" />
 /// <reference path="classes/subclasses/Mallard.ts" />
 /// <reference path="classes/subclasses/Redhead.ts" />
 /// <reference path="classes/subclasses/Rubber.ts" />
