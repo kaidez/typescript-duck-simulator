@@ -74,6 +74,7 @@ var Quack;
     }());
     Quack_1.MuteQuack = MuteQuack;
 })(Quack || (Quack = {}));
+/// <reference path="../classes/Duck.ts" />
 /*
  * =====================================================================
  * MODULE: HelperLibrary.ts
@@ -94,6 +95,24 @@ var HelperLibrary;
         return element.toLowerCase().replace(/\s+/g, '');
     }
     HelperLibrary.setDuckElementId = setDuckElementId;
+    /*
+     * buildElements(): add a duck to the web page with DOM manipulation
+     */
+    function buildElements(getName, getType) {
+        var targetElement = document.getElementById("row-container"), documentFragment = document.createDocumentFragment(), setDiv = document.createElement("div"), duckImage = document.createElement("img"), nameHeader = document.createElement("p"), typeHeader = document.createElement("p"), newName = setDuckElementId(getName);
+        setDiv.setAttribute("id", newName);
+        setDiv.setAttribute("class", "duck-container col-md-4");
+        duckImage.setAttribute("src", "images/redheadDuck.jpg");
+        nameHeader.style.fontWeight = "900";
+        nameHeader.innerHTML = getName;
+        typeHeader.innerHTML = "Type: " + getType;
+        setDiv.appendChild(duckImage);
+        setDiv.appendChild(nameHeader);
+        setDiv.appendChild(typeHeader);
+        documentFragment.appendChild(setDiv);
+        targetElement.appendChild(documentFragment);
+    }
+    HelperLibrary.buildElements = buildElements;
 })(HelperLibrary || (HelperLibrary = {}));
 /// <reference path="../interfaces/Fly.ts" />
 /// <reference path="../interfaces/Quack.ts" />
@@ -131,24 +150,6 @@ var Duck = (function () {
      */
     Duck.prototype.swim = function () {
         console.log("I can either swim or float!!!");
-        /*
-            let
-        
-              // Create a <p> tag that will hold the swimming info
-              createSwimElement = document.createElement( "p" ),
-        
-              // Grab the "name" parameter passed to the current "Duck" instance (t)  a <p> tag that will hold the swimming info
-              target = document.getElementById( newName );
-        
-        
-                newName = HelperLibrary.setDuckElementId(this.name);
-        
-        
-           createSwimElement.setAttribute("id", newName + "-swim-info" );
-        
-           createSwimElement.innerHTML = "I can either swim or float!!!"
-           target.appendChild(createSwimElement);
-        */
     };
     return Duck;
 }());
@@ -165,20 +166,7 @@ var Mallard = (function (_super) {
         _super.apply(this, arguments);
     }
     Mallard.prototype.display = function () {
-        var targetElement = document.getElementById("row-container"), documentFragment = document.createDocumentFragment(), setDiv = document.createElement("div"), duckImage = document.createElement("img"), nameHeader = document.createElement("p"), newName = HelperLibrary.setDuckElementId(this.name), typeHeader = document.createElement("p"), swimElement = document.createElement("p");
-        setDiv.setAttribute("id", newName);
-        setDiv.setAttribute("class", "duck-container col-md-4");
-        duckImage.setAttribute("src", "images/mallardDuck.jpg");
-        swimElement.setAttribute("class", "swim-info");
-        nameHeader.style.fontWeight = "900";
-        nameHeader.innerHTML = this.name;
-        typeHeader.innerHTML = "Type: Mallard";
-        setDiv.appendChild(duckImage);
-        setDiv.appendChild(nameHeader);
-        setDiv.appendChild(typeHeader);
-        setDiv.appendChild(swimElement);
-        documentFragment.appendChild(setDiv);
-        targetElement.appendChild(documentFragment);
+        HelperLibrary.buildElements(this.name, this.constructor.name);
     };
     return Mallard;
 }(Duck));
@@ -195,18 +183,7 @@ var Redhead = (function (_super) {
         _super.apply(this, arguments);
     }
     Redhead.prototype.display = function () {
-        var targetElement = document.getElementById("row-container"), documentFragment = document.createDocumentFragment(), setDiv = document.createElement("div"), duckImage = document.createElement("img"), nameHeader = document.createElement("p"), typeHeader = document.createElement("p"), newName = HelperLibrary.setDuckElementId(this.name);
-        setDiv.setAttribute("id", newName);
-        setDiv.setAttribute("class", "duck-container col-md-4");
-        duckImage.setAttribute("src", "images/redheadDuck.jpg");
-        nameHeader.style.fontWeight = "900";
-        nameHeader.innerHTML = this.name;
-        typeHeader.innerHTML = "Type: Redhead";
-        setDiv.appendChild(duckImage);
-        setDiv.appendChild(nameHeader);
-        setDiv.appendChild(typeHeader);
-        documentFragment.appendChild(setDiv);
-        targetElement.appendChild(documentFragment);
+        HelperLibrary.buildElements(this.name, this.constructor.name);
     };
     return Redhead;
 }(Duck));
@@ -223,18 +200,7 @@ var Rubber = (function (_super) {
         _super.apply(this, arguments);
     }
     Rubber.prototype.display = function () {
-        var targetElement = document.getElementById("row-container"), documentFragment = document.createDocumentFragment(), setDiv = document.createElement("div"), duckImage = document.createElement("img"), nameHeader = document.createElement("p"), typeHeader = document.createElement("p"), newName = HelperLibrary.setDuckElementId(this.name);
-        setDiv.setAttribute("id", newName);
-        setDiv.setAttribute("class", "duck-container col-md-4");
-        duckImage.setAttribute("src", "images/rubberDuck.jpg");
-        nameHeader.style.fontWeight = "900";
-        nameHeader.innerHTML = this.name;
-        typeHeader.innerHTML = "Type: Rubber";
-        setDiv.appendChild(duckImage);
-        setDiv.appendChild(nameHeader);
-        setDiv.appendChild(typeHeader);
-        documentFragment.appendChild(setDiv);
-        targetElement.appendChild(documentFragment);
+        HelperLibrary.buildElements(this.name, this.constructor.name);
     };
     return Rubber;
 }(Duck));
@@ -251,18 +217,7 @@ var Decoy = (function (_super) {
         _super.apply(this, arguments);
     }
     Decoy.prototype.display = function () {
-        var targetElement = document.getElementById("row-container"), documentFragment = document.createDocumentFragment(), setDiv = document.createElement("div"), duckImage = document.createElement("img"), nameHeader = document.createElement("p"), typeHeader = document.createElement("p"), newName = HelperLibrary.setDuckElementId(this.name);
-        setDiv.setAttribute("id", newName);
-        setDiv.setAttribute("class", "duck-container col-md-4");
-        duckImage.setAttribute("src", "images/decoyDuck.jpg");
-        nameHeader.style.fontWeight = "900";
-        nameHeader.innerHTML = this.name;
-        typeHeader.innerHTML = "Type: Decoy Duck";
-        setDiv.appendChild(duckImage);
-        setDiv.appendChild(nameHeader);
-        setDiv.appendChild(typeHeader);
-        documentFragment.appendChild(setDiv);
-        targetElement.appendChild(documentFragment);
+        HelperLibrary.buildElements(this.name, this.constructor.name);
     };
     return Decoy;
 }(Duck));
@@ -277,28 +232,7 @@ var Decoy = (function (_super) {
  * Code that should be executed in the browser should go here.
  * =====================================================================
  */
-// Create instance of a "Redhead"
-var stacey = new Redhead(new Fly.NoFly(), new Quack.MuteQuack(), "Stacy");
+// Create instance of a "Decoy"
+var joey = new Decoy(new Fly.NoFly(), new Quack.MuteQuack(), "Joey");
 // Run the "display()" method for the Redhead
-stacey.display();
-// Create instance of a "RubberDuck"
-var jerrySeinfeld = new Rubber(new Fly.NoFly(), new Quack.MuteQuack(), "Jerry Seinfeld");
-// Run the "display()" method for each instance
-jerrySeinfeld.display();
-// Create instance of a "Redhead"
-var bobby = new Redhead(new Fly.NoFly(), new Quack.MuteQuack(), "Bobby");
-// Run the "display()" method for the Redhead
-bobby.display();
-// Create instance of a "Mallard"
-var joe = new Mallard(new Fly.NoFly(), new Quack.MuteQuack(), "Howard The Duck");
-// Run the "display()" method for each instance
-joe.display();
-joe.swim();
-// Create instance of a "RubberDuck"
-var john = new Rubber(new Fly.NoFly(), new Quack.MuteQuack(), "John");
-// Run the "display()" method for each instance
-john.display();
-// Create instance of a "DecoyDuck"
-var james = new Decoy(new Fly.NoFly(), new Quack.MuteQuack(), "James");
-// Run the "display()" method for each instance
-james.display();
+joey.display();
