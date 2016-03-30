@@ -32,7 +32,7 @@ abstract class Duck {
 
   /*
    * Call "performFly()" when you want a class instance to implement
-   * one of the two "fly" behaviors created earlier
+   * one of the two "fly" behaviors created earlier.
    */
   public performFly(): void {
     this.flybehavior.fly();
@@ -40,14 +40,14 @@ abstract class Duck {
 
   /*
    * Call "performQuack()" when you want a class instance to implement
-   * one of the three "quack" behaviors created earlier
+   * one of the three "quack" behaviors created earlier.
    */
   public performQuack(): void {
     this.quackbehavior.quack();
   }
 
   /*
-   * Set the swim() method that all ducks have
+   * Set the swim() method that all ducks have.
    */
   public swim(): void {
     $( "#isSwim" ).html( "I can either swim or float!!!" );
