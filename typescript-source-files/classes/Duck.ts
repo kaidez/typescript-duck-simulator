@@ -51,25 +51,6 @@ abstract class Duck {
    */
   public swim(): void {
     console.log("I can either swim or float!!!");
-
-/*
-    let
-
-      // Create a <p> tag that will hold the swimming info
-      createSwimElement = document.createElement( "p" ),
-
-      // Grab the "name" parameter passed to the current "Duck" instance (t)  a <p> tag that will hold the swimming info
-      target = document.getElementById( newName );
-
-
-        newName = HelperLibrary.setDuckElementId(this.name);
-
-
-   createSwimElement.setAttribute("id", newName + "-swim-info" );
-
-   createSwimElement.innerHTML = "I can either swim or float!!!"
-   target.appendChild(createSwimElement);
-*/
   }
 
   /*
