@@ -1,3 +1,4 @@
+/// <reference path="../classes/Duck.ts" />
 /*
  * =====================================================================
  * MODULE: HelperLibrary.ts
@@ -17,6 +18,36 @@ module HelperLibrary {
    */
   export function setDuckElementId( element: string ) {
     return element.toLowerCase().replace( /\s+/g, '' );
+  }
+
+  /*
+   * buildElements(): add a duck to the web page with DOM manipulation
+   */
+  export function buildElements( getName, getType ) {
+
+    let targetElement = document.getElementById( "row-container" ),
+        documentFragment = document.createDocumentFragment(),
+        setDiv = document.createElement( "div" ),
+        duckImage = document.createElement( "img" ),
+        nameHeader = document.createElement( "p" ),
+        typeHeader = document.createElement( "p" ),
+        newName = setDuckElementId( getName );
+
+    setDiv.setAttribute( "id", newName );
+    setDiv.setAttribute( "class", "duck-container col-md-4" );
+
+    duckImage.setAttribute( "src", "images/redheadDuck.jpg" );
+
+    nameHeader.style.fontWeight = "900";
+    nameHeader.innerHTML = getName ;
+    typeHeader.innerHTML = "Type: " + getType;
+
+
+    setDiv.appendChild( duckImage );
+    setDiv.appendChild( nameHeader );
+    setDiv.appendChild( typeHeader );
+    documentFragment.appendChild( setDiv );
+    targetElement.appendChild( documentFragment );
   }
 
 }
