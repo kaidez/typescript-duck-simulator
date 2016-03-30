@@ -4,8 +4,7 @@
   "description": "The classic Duck Simulator from \"Head First Design Patterns\" written in TypeScript",
   "main": "index.js",
   "scripts": {
-    "watch-ts": "tsc --out build/main.js typescript-source-files/main.ts -w",
-    "copy-bootstrap": "ncp node_modules/bootstrap/dist/css/bootstrap.css build/bootstrap.css"
+    "watch-ts": "tsc --out main.js typescript-source-files/main.ts -w"
   },
   "repository": {
     "type": "git",
