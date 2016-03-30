@@ -26,4 +26,4 @@ All still in progress...keep watching!!!!
 
 * <a href="https://code.visualstudio.com/">Visual Studio Code</a>. You probably won't abandon your current IDE for this, but it's a GREAT tool for developing TypeScript...and learning it.
 
-* <a href="https://github.com/typings/typings">Typings</a>,  the TypeScript Package Manager. I only used it a little for this project, but I don't see it lasting long.
+* <a href="https://github.com/typings/typings">Typings</a>,  the TypeScript Definitions Manager. I only used it a little for this project, but I don't see it lasting long.
