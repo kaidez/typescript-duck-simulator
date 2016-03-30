@@ -99,9 +99,10 @@ var HelperLibrary;
      * buildElements(): add a duck to the web page with DOM manipulation
      */
     function buildElements(getName, getType) {
-        var targetElement = document.getElementById("row-container"), documentFragment = document.createDocumentFragment(), setDiv = document.createElement("div"), duckImage = document.createElement("img"), nameHeader = document.createElement("p"), typeHeader = document.createElement("p"), newName = setDuckElementId(getName);
+        var targetElement = document.getElementById("row-container"), documentFragment = document.createDocumentFragment(), setDiv = document.createElement("div"), duckImage = document.createElement("img"), nameHeader = document.createElement("p"), typeHeader = document.createElement("p"), swimElement = document.createElement("p"), newName = setDuckElementId(getName);
         setDiv.setAttribute("id", newName);
         setDiv.setAttribute("class", "duck-container col-md-4");
+        swimElement.setAttribute("id", "isSwim");
         duckImage.setAttribute("src", "images/redheadDuck.jpg");
         nameHeader.style.fontWeight = "900";
         nameHeader.innerHTML = getName;
@@ -109,6 +110,7 @@ var HelperLibrary;
         setDiv.appendChild(duckImage);
         setDiv.appendChild(nameHeader);
         setDiv.appendChild(typeHeader);
+        setDiv.appendChild(swimElement);
         documentFragment.appendChild(setDiv);
         targetElement.appendChild(documentFragment);
     }
@@ -149,7 +151,7 @@ var Duck = (function () {
      * Set the swim() method that all ducks have
      */
     Duck.prototype.swim = function () {
-        console.log("I can either swim or float!!!");
+        $("#isSwim").html("I can either swim or float!!!");
     };
     return Duck;
 }());

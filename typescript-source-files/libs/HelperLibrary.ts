@@ -31,10 +31,13 @@ module HelperLibrary {
         duckImage = document.createElement( "img" ),
         nameHeader = document.createElement( "p" ),
         typeHeader = document.createElement( "p" ),
+        swimElement = document.createElement( "p" ),
         newName = setDuckElementId( getName );
 
     setDiv.setAttribute( "id", newName );
     setDiv.setAttribute( "class", "duck-container col-md-4" );
+
+    swimElement.setAttribute("id", "isSwim");
 
     duckImage.setAttribute( "src", "images/redheadDuck.jpg" );
 
@@ -46,6 +49,7 @@ module HelperLibrary {
     setDiv.appendChild( duckImage );
     setDiv.appendChild( nameHeader );
     setDiv.appendChild( typeHeader );
+    setDiv.appendChild( swimElement );
     documentFragment.appendChild( setDiv );
     targetElement.appendChild( documentFragment );
   }

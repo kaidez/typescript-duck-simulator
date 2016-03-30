@@ -10,7 +10,6 @@
 class Decoy extends Duck {
 
   public display(): void {
-
     HelperLibrary.buildElements( this.name, this.constructor.name );
 
   }
