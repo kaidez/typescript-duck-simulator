@@ -266,7 +266,6 @@ var Decoy = (function (_super) {
     };
     return Decoy;
 }(Duck));
-/// <reference path="classes/Duck.ts" />
 /// <reference path="classes/subclasses/Mallard.ts" />
 /// <reference path="classes/subclasses/Redhead.ts" />
 /// <reference path="classes/subclasses/Rubber.ts" />
@@ -278,31 +277,28 @@ var Decoy = (function (_super) {
  * Code that should be executed in the browser should go here.
  * =====================================================================
  */
-// Class instances are automatically created on page-load with an IIFE
-(function () {
-    // Create instance of a "Redhead"
-    var stacey = new Redhead(new Fly.NoFly(), new Quack.MuteQuack(), "Stacy");
-    // Run the "display()" method for the Redhead
-    stacey.display();
-    // Create instance of a "RubberDuck"
-    var jerrySeinfeld = new Rubber(new Fly.NoFly(), new Quack.MuteQuack(), "Jerry Seinfeld");
-    // Run the "display()" method for each instance
-    jerrySeinfeld.display();
-    // Create instance of a "Redhead"
-    var bobby = new Redhead(new Fly.NoFly(), new Quack.MuteQuack(), "Bobby");
-    // Run the "display()" method for the Redhead
-    bobby.display();
-    // Create instance of a "Mallard"
-    var joe = new Mallard(new Fly.NoFly(), new Quack.MuteQuack(), "Howard The Duck");
-    // Run the "display()" method for each instance
-    joe.display();
-    joe.swim();
-    // Create instance of a "RubberDuck"
-    var john = new Rubber(new Fly.NoFly(), new Quack.MuteQuack(), "John");
-    // Run the "display()" method for each instance
-    john.display();
-    // Create instance of a "DecoyDuck"
-    var james = new Decoy(new Fly.NoFly(), new Quack.MuteQuack(), "James");
-    // Run the "display()" method for each instance
-    james.display();
-})();
+// Create instance of a "Redhead"
+var stacey = new Redhead(new Fly.NoFly(), new Quack.MuteQuack(), "Stacy");
+// Run the "display()" method for the Redhead
+stacey.display();
+// Create instance of a "RubberDuck"
+var jerrySeinfeld = new Rubber(new Fly.NoFly(), new Quack.MuteQuack(), "Jerry Seinfeld");
+// Run the "display()" method for each instance
+jerrySeinfeld.display();
+// Create instance of a "Redhead"
+var bobby = new Redhead(new Fly.NoFly(), new Quack.MuteQuack(), "Bobby");
+// Run the "display()" method for the Redhead
+bobby.display();
+// Create instance of a "Mallard"
+var joe = new Mallard(new Fly.NoFly(), new Quack.MuteQuack(), "Howard The Duck");
+// Run the "display()" method for each instance
+joe.display();
+joe.swim();
+// Create instance of a "RubberDuck"
+var john = new Rubber(new Fly.NoFly(), new Quack.MuteQuack(), "John");
+// Run the "display()" method for each instance
+john.display();
+// Create instance of a "DecoyDuck"
+var james = new Decoy(new Fly.NoFly(), new Quack.MuteQuack(), "James");
+// Run the "display()" method for each instance
+james.display();
