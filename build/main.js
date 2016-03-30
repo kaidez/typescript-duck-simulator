@@ -168,6 +168,10 @@ var Mallard = (function (_super) {
         _super.apply(this, arguments);
     }
     Mallard.prototype.display = function () {
+        /*
+         * This returns an error because the TypeScript compiler can't
+         * really see "this " at this point. But the code works.
+         */
         HelperLibrary.buildElements(this.name, this.constructor.name);
     };
     return Mallard;
@@ -185,6 +189,10 @@ var Redhead = (function (_super) {
         _super.apply(this, arguments);
     }
     Redhead.prototype.display = function () {
+        /*
+         * This returns an error because the TypeScript compiler can't
+         * really see "this " at this point. But the code works.
+         */
         HelperLibrary.buildElements(this.name, this.constructor.name);
     };
     return Redhead;
@@ -202,6 +210,10 @@ var Rubber = (function (_super) {
         _super.apply(this, arguments);
     }
     Rubber.prototype.display = function () {
+        /*
+         * This returns an error because the TypeScript compiler can't
+         * really see "this " at this point. But the code works.
+         */
         HelperLibrary.buildElements(this.name, this.constructor.name);
     };
     return Rubber;
@@ -219,6 +231,10 @@ var Decoy = (function (_super) {
         _super.apply(this, arguments);
     }
     Decoy.prototype.display = function () {
+        /*
+         * This returns an error because the TypeScript compiler can't
+         * really see "this " at this point. But the code works.
+         */
         HelperLibrary.buildElements(this.name, this.constructor.name);
     };
     return Decoy;
