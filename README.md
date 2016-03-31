@@ -4,6 +4,8 @@ In order to get a better handle of <a href="http://www.typescriptlang.org/">Type
 
 The content in the _Design Patterns in TypeScript_ repo link below already says how to apply TypeScript to the pattern but again, I'm doing this so I can get a better handle on TypeScript. And the best way to get a better handle on code is to actually write it.
 
+Read the related blog post <a href="http://kaidez.com/typescript-duck-simulator/">here</a>
+
 ## Some links that helped me...
 
 * <a href="http://www.typescriptlang.org/docs/">The Handbook in the Official Documentation</a> (~probably~ your first stop)
