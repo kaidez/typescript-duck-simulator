@@ -13,6 +13,6 @@
   "author": "kaidez",
   "license": "ISC",
   "devDependencies": {
-    "typescript": "^1.8.9"
+    "typescript": "^1.8.10"
   }
 }
